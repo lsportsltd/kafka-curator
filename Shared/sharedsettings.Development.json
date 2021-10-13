@@ -1,0 +1,63 @@
+{
+  "ConnectionStrings": {
+    "Data": "server=SHARED_DEV;database=data;UID=root;password=P@ssw0rd!"
+  },
+  "servicestack": {
+    "license": "7733-e1JlZjo3NzMzLE5hbWU6THNwb3J0cyxUeXBlOk9ybUxpdGVCdXNpbmVzcyxNZXRhOjAsSGFzaDprN3lwNEpmYitDNmpIbkx6OVdlYnQxcGd6Q1YvWE5qdWp3QzhvLy9Rdlc4ak9tZjZUNEh1ajZTejBONDVLcDhiVXpQRG5kbzZIK1FpMjAvK1dWYW9STXV0RFZrQmdBbHlZT0E0OFlXNHA3TzR0Wk42VGhDd0Y2NEl0RGg3Wi9HcU1Ud0dYOGFHSy80UEFlc2FvNUdBZWZpMklNMG1HOE5KQzUxQmRYOGxsaDg9LEV4cGlyeToyMDIwLTEyLTAzfQ=="
+  },
+  //"rookout": {
+  //  "license": "b2f49736332b066109bd85ff59e2769285f4f2ab14a5fee2c041e4481dc62f43" 
+  //},
+  "RabbitMQ": [
+    {
+      "Name": "ArchiveManager",
+      "Address": "iltestrmq",
+      "Port": 5672,
+      "User": "Lsportsrunner",
+      "Password": "12345",
+      "VHost": "ArchiveManager"
+    },
+    {
+      "Name": "PreMatch",
+      "Address": "localhost",
+      "Port": 5672,
+      "User": "Lsportsrunner",
+      "Password": "12345",
+      "VHost": "PreMatch"
+    }
+  ],
+  "Redis": [
+    {
+      "Name": "PreMatch",
+      "Address": "iltestredis",
+      "DatabaseNumber": 1
+    }
+  ],
+  "HeartbeatConsumer": {
+    "Rabbits": [
+      {
+        "ConnectionName": "Heartbeat",
+        "ExchangeName": "main.heartbeat.exchange1",
+        "RoutingKeyName": "main.heartbeat1",
+        "Address": "iltestrmq",
+        "VHost": "Heartbeat",
+        "User": "Lsportsrunner",
+        "Password": "12345"
+      }
+    ]
+  },
+  "HeartbeatPublisher": {
+    "ExpirationIntervalSec": 10,
+    "ExpirationCycles": 2,
+    "ChecksIntervalSeconds": 10,
+    "Rabbit": {
+      "ConnectionName": "Heartbeat",
+      "ExchangeName": "main.heartbeat.exchange",
+      "RoutingKeyName": "main.heartbeat",
+      "Address": "iltestrmq",
+      "VHost": "Heartbeat",
+      "User": "Lsportsrunner",
+      "Password": "12345"
+    }
+  }
+}
