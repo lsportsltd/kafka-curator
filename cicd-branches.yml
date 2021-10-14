@@ -1,0 +1,63 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+ branches:
+   exclude:
+     - main
+   include:
+     - '*'
+
+pool: default
+
+variables:
+  - template: variables.yml
+
+steps:
+- task: gitversion/setup@0
+  displayName: GitVersion Setup
+  inputs: 
+    versionSpec: '5.x'
+- task: gitversion/execute@0
+  displayName: "Calculate version"
+  inputs:
+    useConfigFile: true
+    configFilePath: '$(versionconfig)'
+- script: echo current version is $(MajorMinorPatch).$(BuildMetaData)-$(PreReleaseTag)
+  displayName: 'Display calculated version'
+- task: DotNetCoreCLI@2
+  displayName: "Restore Packages"
+  inputs:
+    command: 'restore'
+    projects: '$(solution)'
+    feedsToUse: 'config'
+    nugetConfigPath: '$(nugetconfig)'
+- task: DotNetCoreCLI@2
+  displayName: 'Build'
+  inputs:
+    command: 'build'
+    projects: '$(solution)'
+    arguments: '--no-restore --configuration "$(prereleaseconfig)" /p:Version=$(MajorMinorPatch).$(BuildMetaData)-$(PreReleaseTag)'
+    versioningScheme: 'byBuildNumber'
+- task: DotNetCoreCLI@2
+  displayName: Run Tests
+  inputs:
+    command: 'test'
+    projects: '$(solution)'
+    publishTestResults: true
+    arguments: '--no-build --configuration $(prereleaseconfig) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=$(Build.SourcesDirectory)/TestResults/Coverage/'
+- task: PublishCodeCoverageResults@1
+  displayName: 'Publish code coverage report'
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(Build.SourcesDirectory)/**/coverage.cobertura.xml'
+- task: DotNetCoreCLI@2
+  displayName: Nuget Push
+  inputs:
+    command: 'push'
+    packagesToPush: '$(packlocation)/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '$(feedname)'
+    versioningScheme: byBuildNumber

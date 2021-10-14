@@ -1,0 +1,8 @@
+variables:
+  nugetconfig: './nuget/nuget.config'
+  solution: './src/Template.sln'
+  releaseconfig: 'Release'
+  prereleaseconfig: 'Debug'
+  feedname: 'Templates/TemplateFeed'
+  packlocation: './src/**'
+  versionconfig: './versionconfig.yml'
