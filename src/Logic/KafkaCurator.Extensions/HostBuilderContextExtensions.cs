@@ -19,7 +19,7 @@ namespace KafkaCurator.Extensions
 
             //first, sets development
             //to avoid mistakes
-            var finalEvnName = Environments.Development;
+            var finalEvnName = "dev";
 
             //if env. args is not empty and env. variable not empty, then take env args
             if (!isNullOrEmptyEnvArgs && isNullOrEmptyEnvVariable)
