@@ -1,0 +1,9 @@
+﻿{
+  "topics": [
+    {
+      "Name": "Livescore.Active",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10
+    }
+  ]
+}
