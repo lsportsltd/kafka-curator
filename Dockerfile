@@ -20,4 +20,4 @@ FROM base AS final
 ARG env
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "KafkaCurator.dll --env ${env}"]
+CMD ["dotnet", "KafkaCurator.dll --env ${env}"]
