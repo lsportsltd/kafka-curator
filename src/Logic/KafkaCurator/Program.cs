@@ -7,7 +7,7 @@ namespace KafkaCurator
 {
     class Program
     {
-        static Task Main(string[] args)
+        public static Task Main(string[] args)
         {
             return Host.CreateDefaultBuilder(args)
                 .ConfigureEnvironment()
