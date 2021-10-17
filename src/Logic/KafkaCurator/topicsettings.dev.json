@@ -4,6 +4,11 @@
       "Name": "Livescore.Active",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10
+    },
+    {
+      "Name": "Test.Topic",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10
     }
   ]
 }
