@@ -2,6 +2,9 @@
   "profiles": {
     "KafkaCurator": {
       "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
     }
   }
 }
