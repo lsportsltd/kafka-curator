@@ -18,7 +18,7 @@ FROM build AS publish
 RUN dotnet publish "KafkaCurator.csproj" -c Release -o /app/publish
 
 FROM base AS final
-ARG env
+ARG ENV
 WORKDIR /app
 COPY --from=publish /app/publish .
-CMD ["dotnet", "KafkaCurator.dll --env ${env}"]
+CMD ["dotnet", "KafkaCurator.dll --env ${ENV}"]
