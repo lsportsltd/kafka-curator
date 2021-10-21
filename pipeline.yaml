@@ -13,6 +13,6 @@ resources:
 stages:
 - template: jobs/kafka-curator.yaml@pipeline-templates
   parameters:
-    slnLocation: "src/KafkaCuratr.sln"
+    slnLocation: "src/KafkaCurator.sln"
     nugetConfigLocation: "nuget/nuget.config"
     csprojLocation: "src/Logic/KafkaCurator/KafkaCurator.csproj"
