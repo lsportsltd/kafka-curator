@@ -11,4 +11,4 @@ resources:
       ref: feature/ansible_env
 
 stages:
-- template: jobs/kafka.yaml@pipeline-templates
+- template: jobs/kafka-curator.yaml@pipeline-templates
