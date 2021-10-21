@@ -11,7 +11,7 @@ resources:
       ref: feature/ansible_env
 
 stages:
-- template: jobs/kafka-curator.yaml@pipeline-templates
+- template: jobs/kafka.yaml@pipeline-templates
   parameters:
     slnLocation: "src/KafkaCurator.sln"
     nugetConfigLocation: "nuget/nuget.config"
