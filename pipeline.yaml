@@ -8,7 +8,7 @@ resources:
     - repository: pipeline-templates
       type: git
       name: Devops/pipeline-templates
-      ref: bugfix/jobs
+      ref: refs/tags/1.0.5
 
 stages:
 - template: jobs/kafka.yaml@pipeline-templates
