@@ -18,8 +18,14 @@ FROM build AS publish
 RUN dotnet publish "KafkaCurator.csproj" -c Release -o /app/publish
 
 FROM base AS final
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+ARG AWS_SESSION_TOKEN
 ARG ENV
 ENV ENV=$ENV
+ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+ENV AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
 WORKDIR /app
 COPY --from=publish /app/publish .
 RUN ["dotnet", "KafkaCurator.dll", "--env $ENV"]
