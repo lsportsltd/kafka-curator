@@ -4,6 +4,56 @@
       "Name": "Livescore.Active",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10
+    },
+    {
+      "Name": "BlackWidow.Remove",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.1.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.1.Remove",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.2.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.2.Remove",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.3.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.3.Remove",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.4.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
+    },
+    {
+      "Name": "BlackWidow.Project.Prematch_Bet365.Step.4.Remove",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3
     }
   ]
 }
