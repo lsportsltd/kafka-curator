@@ -1,5 +1,6 @@
 ﻿{
-    "topics": [{
+    "topics": [
+        {
             "Name": "Livescore.Active",
             "ReplicationFactor": 3,
             "NumOfPartitions": 10
@@ -10,42 +11,28 @@
             "NumOfPartitions": 3
         },
         {
-            "Name": "BlackWidow.Prematch_Bet365.Step_1.Add",
+            "Name": "BlackWidow.PreMatch_Bet365.Remove",
             "ReplicationFactor": 3,
             "NumOfPartitions": 3
         },
         {
-            "Name": "BlackWidow.Prematch_Bet365.Step_1.Remove",
+            "Name": "BlackWidow.PreMatch_Bet365.Step_1.Add",
             "ReplicationFactor": 3,
             "NumOfPartitions": 3
         },
         {
-            "Name": "BlackWidow.Prematch_Bet365.Step_2.Add",
+            "Name": "BlackWidow.PreMatch_Bet365.Step_2.Add",
             "ReplicationFactor": 3,
             "NumOfPartitions": 3
         },
         {
-            "Name": "BlackWidow.Prematch_Bet365.Step_2.Remove",
+            "Name": "BlackWidow.PreMatch_Bet365.Step_3.Add",
             "ReplicationFactor": 3,
             "NumOfPartitions": 3
         },
+
         {
-            "Name": "BlackWidow.Prematch_Bet365.Step_3.Add",
-            "ReplicationFactor": 3,
-            "NumOfPartitions": 3
-        },
-        {
-            "Name": "BlackWidow.Prematch_Bet365.Step_3.Remove",
-            "ReplicationFactor": 3,
-            "NumOfPartitions": 3
-        },
-        {
-            "Name": "BlackWidow.Prematch_Bet365.Step_4.Add",
-            "ReplicationFactor": 3,
-            "NumOfPartitions": 3
-        },
-        {
-            "Name": "BlackWidow.Prematch_Bet365.Step_4.Remove",
+            "Name": "BlackWidow.PreMatch_Bet365.Step_4.Add",
             "ReplicationFactor": 3,
             "NumOfPartitions": 3
         }
