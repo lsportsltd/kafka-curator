@@ -2,7 +2,6 @@
 {
     public enum CleanupPolicy
     {
-        None,
         Delete,
         Compact
     }

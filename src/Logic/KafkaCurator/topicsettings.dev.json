@@ -3,12 +3,14 @@
         {
             "Name": "Livescore.Active",
             "ReplicationFactor": 3,
-            "NumOfPartitions": 10
+            "NumOfPartitions": 10,
+            "CleanupPolicy": "compact"
         },
         {
             "Name": "BlackWidow.Items",
             "ReplicationFactor": 3,
-            "NumOfPartitions": 3
+            "NumOfPartitions": 3,
+            "CleanupPolicy": "compact"
         },
         {
             "Name": "BlackWidow.PreMatch_Bet365.Remove",
