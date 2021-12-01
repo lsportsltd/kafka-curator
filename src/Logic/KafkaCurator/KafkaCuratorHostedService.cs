@@ -38,10 +38,7 @@ namespace KafkaCurator
 
             if (configTopics == null)
             {
-                var errMessage = "Failed to find topics within configuration, aborting";
-                _logger.LogInformation(errMessage);
-                _applicationLifetime.StopApplication();
-                return;
+                configTopics = Array.Empty<Topic>();
             }
 
             _logger.LogInformation($"Found {configTopics.Length} topics within configuration...");
