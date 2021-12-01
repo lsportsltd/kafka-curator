@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using KafkaCurator.Core.Constants;
+using KafkaCurator.Core.Enums;
 using KafkaCurator.Kafka;
 using KafkaCurator.Kafka.Interfaces;
 using KafkaCurator.Models;
@@ -59,6 +60,11 @@ namespace KafkaCurator
         private bool ShouldAlterTopic(Topic topic, TopicMetadata topicMetadata)
         {
             if (topic.NumOfPartitions != topicMetadata.Partitions.Count)
+            {
+                return true;
+            }
+
+            if (topic.CleanupPolicy == CleanupPolicy.Delete || topic.CleanupPolicy == CleanupPolicy.Compact)
             {
                 return true;
             }
