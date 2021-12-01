@@ -8,8 +8,7 @@
         {
             "Name": "BlackWidow.Items",
             "ReplicationFactor": 3,
-            "NumOfPartitions": 3,
-            "CleanupPolicy": "delete"
+            "NumOfPartitions": 3
         },
         {
             "Name": "BlackWidow.PreMatch_Bet365.Remove",
