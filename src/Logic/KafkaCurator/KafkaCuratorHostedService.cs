@@ -36,6 +36,13 @@ namespace KafkaCurator
             var configTopics = _configuration.GetSection("topics").Get<Topic[]>();
             var topicMetadata = _kafkaClient.GetKafkaTopics();
 
+            if (configTopics == null)
+            {
+                var errMessage = "Failed to find topics within configuration, aborting";
+                _logger.LogInformation(errMessage);
+                throw new Exception(errMessage);
+            }
+
             _logger.LogInformation($"Found {configTopics.Length} topics within configuration...");
             _logger.LogInformation($"Found {topicMetadata.Count} topics within Kafka...");
 
