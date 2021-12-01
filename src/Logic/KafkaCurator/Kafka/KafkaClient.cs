@@ -58,7 +58,7 @@ namespace KafkaCurator.Kafka
                     Name = topic.Name,
                     NumPartitions = topic.NumOfPartitions,
                     ReplicationFactor = topic.ReplicationFactor,
-                    Configs = new Dictionary<string, string> { { "cleanup.policy", topic.CleanupPolicy.ToString() } }
+                    Configs = new Dictionary<string, string> { { "cleanup.policy", topic.CleanupPolicy.ToString().ToLower() } }
                 };
 
                 newTopics.Add(topicSpecs);
