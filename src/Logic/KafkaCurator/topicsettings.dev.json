@@ -3,13 +3,13 @@
     {
       "Name": "Livescore.Active",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 6,
+      "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
     },
     {
       "Name": "BlackWidow.Items",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 6,
+      "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
     },
     {

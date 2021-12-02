@@ -69,11 +69,6 @@ namespace KafkaCurator
                 return true;
             }
 
-            if (topic.CleanupPolicy == CleanupPolicy.Delete || topic.CleanupPolicy == CleanupPolicy.Compact)
-            {
-                return true;
-            }
-
             return false;
         }
 
