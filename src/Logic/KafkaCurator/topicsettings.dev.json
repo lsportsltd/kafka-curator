@@ -13,32 +13,37 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "BlackWidow.PreMatch_Bet365.Remove",
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.Remove",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.PreMatch_Bet365.Step_1.Add",
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.4d523acd-3004-4eb8-9f1f-509f76b51cc7.Add",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.PreMatch_Bet365.Step_2.Add",
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.27fc49cb-bf51-44be-b4c4-7834255b4f2e.Add",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.PreMatch_Bet365.Step_3.Add",
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.f98b751a-d6cc-42fb-b2a9-fd1622698e74.Add",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
-
     {
-      "Name": "BlackWidow.PreMatch_Bet365.Step_4.Add",
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.2c1e49e8-5063-42d0-8cc5-d3f512daf76d.Add",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.3744c31e-0563-4b2a-ac3b-c116ad14581f.Add",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
