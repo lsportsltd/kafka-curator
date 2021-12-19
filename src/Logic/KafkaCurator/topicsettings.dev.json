@@ -33,19 +33,19 @@
     {
       "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.f98b751a-d6cc-42fb-b2a9-fd1622698e74.Add",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 20,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "compact"
     },
     {
       "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.2c1e49e8-5063-42d0-8cc5-d3f512daf76d.Add",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 50,
+      "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
     },
     {
       "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.3744c31e-0563-4b2a-ac3b-c116ad14581f.Add",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 200,
+      "NumOfPartitions": 400,
       "CleanupPolicy": "compact"
     }
   ]
