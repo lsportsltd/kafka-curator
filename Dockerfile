@@ -28,4 +28,7 @@ ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ENV AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
 WORKDIR /app
 COPY --from=publish /app/publish .
-RUN ["dotnet", "KafkaCurator.dll", "--env $ENV"]
+
+RUN export ASPNETCORE_ENVIRONMENT=$ENV
+
+RUN ["dotnet", "KafkaCurator.dll"]
