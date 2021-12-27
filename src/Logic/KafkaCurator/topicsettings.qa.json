@@ -21,7 +21,7 @@
     {
       "Name": "BlackWidow.caf76460-582e-47b3-bede-4a8d00178706.27fc49cb-bf51-44be-b4c4-7834255b4f2e.Add",
       "ReplicationFactor": 2,
-      "NumOfPartitions": 50,
+      "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
     },
     {
