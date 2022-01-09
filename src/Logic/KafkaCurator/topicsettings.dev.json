@@ -11,6 +11,18 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 50,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Stm.FixtureAssociator.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Stm.FixtureAssociator.Associated",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
     }
   ]
 }
