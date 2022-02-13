@@ -5,6 +5,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "BlackWidow.Raw",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 100,
+      "CleanupPolicy": "compact"
     }
   ]
 }
