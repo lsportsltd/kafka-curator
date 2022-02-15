@@ -3,6 +3,6 @@
     public static class Endpoints
     {
         public static string KafkaBootstrapServers =
-            "MESSAGE-BROKERS:MAIN-MESSAGE-BROKER:BOOTSTRAP-BROKER-TLS";
+            "MESSAGE-BROKER:KAFKA:MAIN-MESSAGE-BROKER:BOOTSTRAP-BROKER-TLS";
     }
 }

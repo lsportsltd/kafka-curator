@@ -5,7 +5,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using KafkaCurator.Core.Constants;
-using KafkaCurator.Core.Enums;
 using KafkaCurator.Kafka;
 using KafkaCurator.Kafka.Interfaces;
 using KafkaCurator.Models;
