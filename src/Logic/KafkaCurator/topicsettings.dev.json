@@ -29,6 +29,30 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "BlackWidow.Raw",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "BlackWidow.Transformed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Markets.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Markets.Outliers",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
     }
   ]
 }
