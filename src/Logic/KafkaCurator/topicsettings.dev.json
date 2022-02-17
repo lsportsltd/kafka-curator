@@ -13,16 +13,22 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "Stm.FixtureAssociator.Refined",
+      "Name": "DI.Fixture.Published",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
-      "Name": "Stm.FixtureAssociator.Associated",
+      "Name": "STM.Fxiture.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Fixture.Associated",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "BlackWidow.Raw",
