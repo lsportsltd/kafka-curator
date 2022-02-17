@@ -13,7 +13,13 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "Stm.FixtureAssociator.Refined",
+      "Name": "Di.FixtureManager.Fixture",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Stm.FixtureRefiner.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
