@@ -19,7 +19,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fxiture.Refined",
+      "Name": "STM.Fixture.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
