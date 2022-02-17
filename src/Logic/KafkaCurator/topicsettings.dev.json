@@ -13,19 +13,19 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "DI.FixtureManager.Fixture",
+      "Name": "DI.Fixture.Published",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.FixtureRefiner.Refined",
+      "Name": "STM.Fxiture.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.FixtureAssociator.Associated",
+      "Name": "STM.Fixture.Associated",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
