@@ -53,6 +53,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
+    },
+	{
+      "Name": "TrackChanges.New",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
     }
   ]
 }
