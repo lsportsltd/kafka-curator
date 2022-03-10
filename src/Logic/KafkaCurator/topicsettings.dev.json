@@ -55,7 +55,19 @@
       "CleanupPolicy": "compact"
     },
 	{
-      "Name": "TrackChanges.New",
+      "Name": "TrackChanges.Data",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+	{
+      "Name": "TrackChanges.Crm",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+	{
+      "Name": "TrackChanges.STM",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
