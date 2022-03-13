@@ -12,7 +12,7 @@
       "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
     },
-	{
+    {
       "Name": "DI.Fixture.Published",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
@@ -20,6 +20,12 @@
     },
     {
       "Name": "STM.Fixture.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Fixture.Associated",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
