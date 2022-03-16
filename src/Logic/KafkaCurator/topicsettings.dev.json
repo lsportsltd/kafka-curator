@@ -61,6 +61,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "TrackChanges.MappingData",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "TrackChanges.Crm",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
