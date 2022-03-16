@@ -58,19 +58,25 @@
       "Name": "TrackChanges.Data",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "TrackChanges.MappingData",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "TrackChanges.Crm",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "TrackChanges.STM",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "DI.Fixture.Distributor",
