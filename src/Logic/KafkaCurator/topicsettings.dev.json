@@ -85,19 +85,19 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "di.livescore.distributed",
+      "Name": "DI.Livescore.Distributed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "stm.livescore.associated",
+      "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "stm.livescore.refined",
+      "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
