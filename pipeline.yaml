@@ -6,7 +6,7 @@ trigger:
 resources:
   repositories:
     - repository: pipeline-templates
-      type: git
+      type: github
       name: lsportsltd/devops-pipeline-templates
       ref: refs/tags/2.3.3
       endpoint: lsportsltd
