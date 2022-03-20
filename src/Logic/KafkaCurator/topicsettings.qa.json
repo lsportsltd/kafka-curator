@@ -29,12 +29,6 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Fixture.Distributor",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
     }
   ]
 }
