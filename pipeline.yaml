@@ -9,6 +9,7 @@ resources:
       type: git
       name: Devops/pipeline-templates
       ref: refs/tags/2.3.3
+      endpoint: lsportsltd
 
 stages:
 - template: jobs/kafka.yaml@pipeline-templates
