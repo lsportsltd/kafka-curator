@@ -13,7 +13,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "DI.Fixture.Published",
+      "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
