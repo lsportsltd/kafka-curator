@@ -7,7 +7,7 @@ resources:
   repositories:
     - repository: pipeline-templates
       type: git
-      name: pipeline-templates
+      name: lsportsltd/devops-pipeline-templates
       ref: refs/tags/2.3.3
       endpoint: lsportsltd
 
