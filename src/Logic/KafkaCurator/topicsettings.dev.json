@@ -83,6 +83,24 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "di.livescore.distributed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "stm.livescore.associated",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "stm.livescore.refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
