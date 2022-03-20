@@ -13,7 +13,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "DI.Fixture.Published",
+      "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
@@ -77,12 +77,6 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Fixture.Distributor",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
     },
     {
       "Name": "DI.Livescore",

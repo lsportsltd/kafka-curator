@@ -1,31 +1,19 @@
 ﻿{
   "topics": [
     {
-      "Name": "BlackWidow.Items",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 100,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "BlackWidow.Raw",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 100,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fixture.Refined",
+      "Name": "TrackChanges.Data",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fixture.Associated",
+      "Name": "TrackChanges.MappingData",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
