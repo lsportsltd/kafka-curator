@@ -85,7 +85,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "DI.Livescore.Distributed",
+      "Name": "DI.Livescore",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
