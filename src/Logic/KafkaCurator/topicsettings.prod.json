@@ -1,0 +1,22 @@
+﻿{
+  "topics": [
+    {
+      "Name": "DI.Fixture.Published",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "TrackChanges.Data",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "TrackChanges.MappingData",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    }
+  ]
+}
