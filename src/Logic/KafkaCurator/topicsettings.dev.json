@@ -9,7 +9,7 @@
     {
       "Name": "BlackWidow.Items",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "compact"
     },
     {
