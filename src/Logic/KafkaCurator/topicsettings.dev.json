@@ -85,13 +85,13 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Livescore.Associated",
+      "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Livescore.Refined",
+      "Name": "STM.Livescore.Package.Associated",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
