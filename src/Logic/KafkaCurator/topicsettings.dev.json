@@ -97,7 +97,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DATA.ProviderEvent",
+      "Name": "DATA.ProviderEvents.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
