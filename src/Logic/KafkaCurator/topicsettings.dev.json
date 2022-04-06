@@ -93,7 +93,7 @@
     {
       "Name": "STM.Livescore.Package.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "NumOfPartitions": 6, // Formula - [STM.Livescore.Refined].[NumOfPartitions] * Avg(CustomerPackageSubscriptions per Fixtures)
       "CleanupPolicy": "delete"
     },
     {
