@@ -8,7 +8,7 @@ resources:
     - repository: pipeline-templates
       type: github
       name: lsportsltd/devops-pipeline-templates
-      ref: refs/tags/2.3.9
+      ref: refs/tags/2.4.0
       endpoint: lsportsltd
 
 stages:
