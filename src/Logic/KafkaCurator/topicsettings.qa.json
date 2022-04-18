@@ -7,12 +7,6 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "BlackWidow.Raw",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 100,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,

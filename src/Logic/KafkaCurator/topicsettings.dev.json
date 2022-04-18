@@ -31,12 +31,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.Raw",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "Markets.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
@@ -67,7 +61,19 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DATA.ProviderEvents.Refined",
+      "Name": "DATA.ProviderEvent.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.ProviderEvent.Mapped",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.ProviderEvent.NotMapped",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
