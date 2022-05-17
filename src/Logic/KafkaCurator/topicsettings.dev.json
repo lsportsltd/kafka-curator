@@ -6,6 +6,12 @@
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
     },
+     {
+      "Name": "Livescore.Delta",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
     {
       "Name": "BlackWidow.Items",
       "ReplicationFactor": 3,
