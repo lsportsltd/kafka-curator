@@ -33,19 +33,19 @@
     {
       "Name": "DI.Livescore",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Livescore.Package.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 6,
+      "NumOfPartitions": 20,
       "CleanupPolicy": "delete"
     },
     {
