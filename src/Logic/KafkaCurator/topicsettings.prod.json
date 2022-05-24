@@ -18,6 +18,7 @@
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
+    {
       "Name": "DI.Livescore",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
