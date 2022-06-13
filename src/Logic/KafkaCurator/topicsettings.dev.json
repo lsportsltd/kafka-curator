@@ -7,6 +7,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "Livescore.Delta",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "BlackWidow.Items",
       "ReplicationFactor": 3,
       "NumOfPartitions": 50,
@@ -80,6 +86,18 @@
     },
     {
       "Name": "DATA.ProviderEvent.NotMapped",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.ProviderFixture.Full",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
