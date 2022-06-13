@@ -1,4 +1,4 @@
-﻿{
+{
   "topics": [
     {
       "Name": "Livescore.Active",
@@ -46,7 +46,7 @@
       "Name": "Markets.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "Markets.Outliers",

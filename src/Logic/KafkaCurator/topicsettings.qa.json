@@ -52,7 +52,7 @@
       "Name": "Markets.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "DATA.ProviderFixture.Full",
@@ -71,6 +71,6 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
-    },
+    }
   ]
 }
