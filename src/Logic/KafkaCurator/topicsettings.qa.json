@@ -70,19 +70,19 @@
       "Name": "Livescore.Delta",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "compact"
     },
     {
       "Name": "Livescore.Buffer",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "Livescore.Buffer.Expired",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     }
   ]
 }
