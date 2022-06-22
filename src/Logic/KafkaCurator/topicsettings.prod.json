@@ -39,7 +39,7 @@
     {
       "Name": "DATA.ProviderFixture.Full",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 15,
+      "NumOfPartitions": 30,
       "CleanupPolicy": "delete"
     },
     {
