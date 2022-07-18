@@ -53,6 +53,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
-    }  
+    },
+    {
+      "Name": "STM.FeedSuspension.Changed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    }
   ]
 }
