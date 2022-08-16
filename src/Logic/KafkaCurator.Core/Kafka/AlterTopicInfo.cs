@@ -1,4 +1,4 @@
-﻿namespace KafkaCurator.Kafka
+﻿namespace KafkaCurator.Core.Kafka
 {
     public class AlterTopicInfo
     {

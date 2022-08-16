@@ -2,9 +2,8 @@
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using Confluent.Kafka.Admin;
-using KafkaCurator.Models;
 
-namespace KafkaCurator.Kafka.Interfaces
+namespace KafkaCurator.Core.Kafka
 {
     public interface IKafkaClient
     {

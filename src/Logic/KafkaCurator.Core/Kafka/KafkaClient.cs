@@ -4,17 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using Confluent.Kafka.Admin;
-using KafkaCurator.Kafka.Interfaces;
-using KafkaCurator.Models;
+using Microsoft.Extensions.Logging;
 
-namespace KafkaCurator.Kafka
+namespace KafkaCurator.Core.Kafka
 {
     public class KafkaClient : IKafkaClient
     {
+        private readonly ILogger<IKafkaClient> _logger;
         private readonly IAdminClient _adminClient;
 
-        public KafkaClient(string bootstrapServers)
+        public KafkaClient(string bootstrapServers, ILogger<IKafkaClient> logger)
         {
+            _logger = logger;
             _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = bootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
         }
 
@@ -31,6 +32,8 @@ namespace KafkaCurator.Kafka
 
         public Task AlterTopicPartitionAsync(Topic topic)
         {
+            _logger.LogInformation($"Altering num of partitions for topic: {topic.Name}, num of partitions: {topic.NumOfPartitions}");
+
             var partitionsSpecifications = new List<PartitionsSpecification>();
 
             var partitionSpecification = new PartitionsSpecification
@@ -114,6 +117,8 @@ namespace KafkaCurator.Kafka
 
         private Task AlterCleanupPolicy(Topic topic)
         {
+            _logger.LogInformation($"Altering cleanup.policy for topic: {topic.Name}, new policy: {topic.CleanupPolicy.ToString().ToLower()}");
+
             var configs = GetCleanupPolicyConfigs(topic);
 
             return _adminClient.AlterConfigsAsync(configs,
