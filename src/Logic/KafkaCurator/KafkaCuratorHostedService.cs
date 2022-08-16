@@ -5,9 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using KafkaCurator.Core.Constants;
-using KafkaCurator.Kafka;
-using KafkaCurator.Kafka.Interfaces;
-using KafkaCurator.Models;
+using KafkaCurator.Core.Kafka;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -21,15 +19,14 @@ namespace KafkaCurator
         private readonly IConfiguration _configuration;
         private readonly IKafkaClient _kafkaClient;
 
-        public KafkaCuratorHostedService(ILogger<KafkaCuratorHostedService> logger, IHostApplicationLifetime applicationLifetime, IConfiguration configuration)
+        public KafkaCuratorHostedService(ILogger<KafkaCuratorHostedService> logger, IHostApplicationLifetime applicationLifetime, IConfiguration configuration, IKafkaClient kafkaClient)
         {
             _logger = logger;
             _applicationLifetime = applicationLifetime;
             _configuration = configuration;
-
-            var bootstrapServers = _configuration[Endpoints.KafkaBootstrapServers];
-            _kafkaClient = new KafkaClient(bootstrapServers);
+            _kafkaClient = kafkaClient;
         }
+
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             var configTopics = _configuration.GetSection("topics").Get<Topic[]>();

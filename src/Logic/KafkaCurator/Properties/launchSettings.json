@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "KafkaCurator": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "qa"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
