@@ -29,6 +29,21 @@ namespace KafkaCurator.Kafka
             return _adminClient.DeleteTopicsAsync(topics);
         }
 
+        public Task AlterTopicPartitionAsync(Topic topic)
+        {
+            var partitionsSpecifications = new List<PartitionsSpecification>();
+
+            var partitionSpecification = new PartitionsSpecification
+            {
+                IncreaseTo = topic.NumOfPartitions,
+                Topic = topic.Name
+            };
+
+            partitionsSpecifications.Add(partitionSpecification);
+
+            return _adminClient.CreatePartitionsAsync(partitionsSpecifications);
+        }
+
         public Task AlterTopicPartitionsAsync(IEnumerable<Topic> topics)
         {
             var partitionsSpecifications = new List<PartitionsSpecification>();
@@ -45,6 +60,22 @@ namespace KafkaCurator.Kafka
             }
 
             return _adminClient.CreatePartitionsAsync(partitionsSpecifications);
+        }
+
+        public async Task AlterTopics(IEnumerable<(Topic, AlterTopicInfo)> alters)
+        {
+            foreach (var (topic, alterInfo) in alters)
+            {
+                if (alterInfo.ShouldAlterNumOfPartitions)
+                {
+                    await AlterTopicPartitionAsync(topic);
+                }
+
+                if (alterInfo.ShouldAlterCleanupPolicy)
+                {
+                    await AlterCleanupPolicy(topic);
+                }
+            }
         }
 
         public Task CreateTopicsAsync(IEnumerable<Topic> topics)
@@ -65,6 +96,50 @@ namespace KafkaCurator.Kafka
             }
 
             return _adminClient.CreateTopicsAsync(newTopics);
+        }
+
+        public async Task<DescribeConfigsResult> DescribeTopicConfigAsync(string topic)
+        {
+            var configResource = new ConfigResource
+            {
+                Name = topic,
+                Type = ResourceType.Topic
+            };
+
+            var result = await _adminClient.DescribeConfigsAsync(new List<ConfigResource> { configResource },
+                new DescribeConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
+
+            return result.FirstOrDefault();
+        }
+
+        private Task AlterCleanupPolicy(Topic topic)
+        {
+            var configs = GetCleanupPolicyConfigs(topic);
+
+            return _adminClient.AlterConfigsAsync(configs,
+                new AlterConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
+        }
+
+        private Dictionary<ConfigResource, List<ConfigEntry>> GetCleanupPolicyConfigs(Topic topic)
+        {
+            var configResource = new ConfigResource
+            {
+                Name = topic.Name,
+                Type = ResourceType.Topic
+            };
+
+            var configEntry = new ConfigEntry
+            {
+                Name = "cleanup.policy",
+                Value = topic.CleanupPolicy.ToString().ToLower()
+            };
+
+            var dictionary = new Dictionary<ConfigResource, List<ConfigEntry>>
+            {
+                { configResource, new List<ConfigEntry> { configEntry } }
+            };
+
+            return dictionary;
         }
     }
 }

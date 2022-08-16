@@ -1,7 +1,10 @@
 {
   "profiles": {
     "KafkaCurator": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "\"qa\""
+      }
     },
     "Docker": {
       "commandName": "Docker"
