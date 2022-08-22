@@ -51,7 +51,7 @@
     {
       "Name": "Markets.Valid",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 30,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "delete"
     },
     {
