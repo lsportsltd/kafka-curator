@@ -5,9 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using KafkaCurator.Core.Constants;
-using KafkaCurator.Kafka;
-using KafkaCurator.Kafka.Interfaces;
-using KafkaCurator.Models;
+using KafkaCurator.Core.Kafka;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -21,15 +19,14 @@ namespace KafkaCurator
         private readonly IConfiguration _configuration;
         private readonly IKafkaClient _kafkaClient;
 
-        public KafkaCuratorHostedService(ILogger<KafkaCuratorHostedService> logger, IHostApplicationLifetime applicationLifetime, IConfiguration configuration)
+        public KafkaCuratorHostedService(ILogger<KafkaCuratorHostedService> logger, IHostApplicationLifetime applicationLifetime, IConfiguration configuration, IKafkaClient kafkaClient)
         {
             _logger = logger;
             _applicationLifetime = applicationLifetime;
             _configuration = configuration;
-
-            var bootstrapServers = _configuration[Endpoints.KafkaBootstrapServers];
-            _kafkaClient = new KafkaClient(bootstrapServers);
+            _kafkaClient = kafkaClient;
         }
+
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             var configTopics = _configuration.GetSection("topics").Get<Topic[]>();
@@ -61,45 +58,62 @@ namespace KafkaCurator
             return Task.CompletedTask;
         }
 
-        private bool ShouldAlterTopic(Topic topic, TopicMetadata topicMetadata)
+        private async Task<(bool, AlterTopicInfo)> ShouldAlterTopic(Topic topic, TopicMetadata topicMetadata)
         {
+            var result = false;
+            var alterInfo = new AlterTopicInfo();
+
             if (topic.NumOfPartitions != topicMetadata.Partitions.Count)
             {
-                return true;
+                result = true;
+                alterInfo.ShouldAlterNumOfPartitions = true;
             }
 
-            return false;
+            var configs = await _kafkaClient.DescribeTopicConfigAsync(topic.Name);
+            if (configs == null) return (result, alterInfo);
+
+            var cleanupPolicy = topic.CleanupPolicy.ToString().ToLower();
+            if (configs.Entries.TryGetValue("cleanup.policy", out var entry))
+            {
+                if (entry.Value != cleanupPolicy)
+                {
+                    result = true;
+                    alterInfo.ShouldAlterCleanupPolicy = true;
+                }
+            }
+
+            return (result, alterInfo);
         }
 
-        private Task HandleExistingTopics(Topic[] existingTopics, Dictionary<string, TopicMetadata> topicsMetadata)
+        private async Task HandleExistingTopics(Topic[] existingTopics, Dictionary<string, TopicMetadata> topicsMetadata)
         {
             try
             {
-                if (existingTopics.Length == 0) return Task.CompletedTask;
+                if (existingTopics.Length == 0) return;
 
-                var topicsToAlter = new List<Topic>();
+                var topicsToAlter = new List<(Topic, AlterTopicInfo)>();
 
                 foreach (var existingTopic in existingTopics)
                 {
-                    if (!ShouldAlterTopic(existingTopic, topicsMetadata[existingTopic.Name])) continue;
+                    var (result, alterInfo) = await ShouldAlterTopic(existingTopic, topicsMetadata[existingTopic.Name]);
+                    if (!result) continue;
 
-                    topicsToAlter.Add(existingTopic);
+                    topicsToAlter.Add((existingTopic, alterInfo));
                 }
 
                 if (topicsToAlter.Count == 0)
                 {
                     _logger.LogInformation("There are no existing topics to alter.");
-                    return Task.CompletedTask;
+                    return;
                 }
 
                 _logger.LogInformation($"Found {topicsToAlter.Count} topics to alter.");
 
-                return _kafkaClient.AlterTopicPartitionsAsync(topicsToAlter);
+                await _kafkaClient.AlterTopics(topicsToAlter);
             }
             catch (Exception e)
             {
                 _logger.LogError(e, "An error has occurred while handling existing topics!");
-                return Task.CompletedTask;
             }
         }
 
