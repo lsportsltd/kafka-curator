@@ -55,6 +55,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.Valid.Markets",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.FeedSuspension.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
