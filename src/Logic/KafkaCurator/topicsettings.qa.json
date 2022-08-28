@@ -55,7 +55,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Valid.Markets",
+      "Name": "DI.Market.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
