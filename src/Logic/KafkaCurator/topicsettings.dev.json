@@ -67,18 +67,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.InPlayMarket.Valid",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.PreMatchMarket.Valid",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
       "Name": "Markets.Outliers",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
@@ -144,20 +132,8 @@
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
-    {
-      "Name": "OCR.FullFrame",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "OCR.ScoreboardFrame",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "OCR.ResultJson",
+	{
+      "Name": "Data.PreMatch.Markets.Distributed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
