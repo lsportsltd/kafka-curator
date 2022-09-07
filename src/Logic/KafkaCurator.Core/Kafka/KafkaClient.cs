@@ -27,6 +27,7 @@ namespace KafkaCurator.Core.Kafka
 
         public Task DeleteTopicAsync(string[] topics)
         {
+            _logger.LogInformation($"Deleting the following topics: {string.Join(',', topics)}");
             return _adminClient.DeleteTopicsAsync(topics);
         }
 

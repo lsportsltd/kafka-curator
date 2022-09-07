@@ -146,6 +146,8 @@ namespace KafkaCurator
                     return Task.CompletedTask;
                 }
 
+                _logger.LogInformation($"Found {topics.Length} topics to delete...");
+
                 return _kafkaClient.DeleteTopicAsync(topics);
             }
             catch (Exception e)
