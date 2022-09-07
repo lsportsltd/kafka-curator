@@ -163,7 +163,7 @@
       "CleanupPolicy": "compact"
     },
 	{
-      "Name": "DATA.PreMatch.Markets.Distributed",
+      "Name": "DATA.Markets.PreMatch",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
