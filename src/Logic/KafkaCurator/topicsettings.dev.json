@@ -161,12 +161,6 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
-    },
-	{
-      "Name": "Data.PreMatch.Markets.Distributed",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
     }
   ]
 }
