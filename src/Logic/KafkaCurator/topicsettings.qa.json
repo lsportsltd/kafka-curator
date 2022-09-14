@@ -40,12 +40,18 @@
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Livescore.Package.Associated", // TODO: delete after full migration to new renamed topic
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 20,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Livescore.Package.Associated",
+      "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 20,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
@@ -104,6 +110,18 @@
     },
     {
       "Name": "STM.Subscription.Handled",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Markets.Settings.Synchronization",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.Settings.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
