@@ -10,7 +10,7 @@
       "Name": "STM.Fixture.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Fixture.Associated",
@@ -28,13 +28,7 @@
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.Livescore.Package.Associated", // TODO: delete after full migration to new renamed topic
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 20,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "compact"
     },
     {
       "Name": "STM.Livescore.Associated",

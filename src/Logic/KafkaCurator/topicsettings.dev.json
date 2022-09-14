@@ -97,12 +97,6 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Livescore.Package.Associated", // TODO: delete after full migration to new renamed topic
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 6,
-      "CleanupPolicy": "delete"
-    },
-    {
       "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
