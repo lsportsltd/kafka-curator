@@ -67,6 +67,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "BlackWidow.Raw",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "DI.InPlayMarket.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
