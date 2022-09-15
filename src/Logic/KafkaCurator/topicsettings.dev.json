@@ -169,7 +169,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Markets.Settings.Synchronization",
+      "Name": "STM.Markets.Settings.Maintenance",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
