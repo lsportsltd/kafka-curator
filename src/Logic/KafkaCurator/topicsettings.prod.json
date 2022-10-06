@@ -55,6 +55,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "Markets.Valid.Prematch",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Inplay",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.FeedSuspension.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,

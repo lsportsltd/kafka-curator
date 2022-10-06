@@ -55,6 +55,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "Markets.Valid.Prematch",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Inplay",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.InPlayMarket.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
