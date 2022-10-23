@@ -1,6 +1,6 @@
 ﻿using KafkaCurator.Core.Enums;
 
-namespace KafkaCurator.Models
+namespace KafkaCurator.Core.Kafka
 {
     public class Topic
     {

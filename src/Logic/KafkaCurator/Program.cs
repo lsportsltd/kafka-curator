@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using KafkaCurator.Core.Constants;
 using KafkaCurator.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,9 +14,13 @@ namespace KafkaCurator
                 .ConfigureEnvironment()
                 .ConfigureAppSettings()
                 .ConfigureAwsSsm()
-                .ConfigureServices(collection =>
+                .ConfigureServices((context, serviceCollection) =>
                 {
-                    collection.AddHostedService<KafkaCuratorHostedService>();
+                    serviceCollection.AddKafkaClient(options =>
+                    {
+                        options.BootstrapServers = context.Configuration[Endpoints.KafkaBootstrapServers];
+                    });
+                    serviceCollection.AddHostedService<KafkaCuratorHostedService>();
                 })
                 .Build()
                 .RunAsync();

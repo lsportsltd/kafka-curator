@@ -40,16 +40,40 @@
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Livescore.Package.Associated",
+      "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 20,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "Markets.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Prematch",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Inplay",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.InPlayMarket.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.PreMatchMarket.Valid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
@@ -89,6 +113,42 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Subscription.Handled",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Markets.Settings.Maintenance",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.Settings.Changed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "OCR.FullFrame",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "OCR.ScoreboardFrame",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "OCR.ResultJson",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
     }
   ]
 }

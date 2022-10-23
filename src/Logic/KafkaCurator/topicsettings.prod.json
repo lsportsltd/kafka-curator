@@ -28,12 +28,12 @@
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Livescore.Package.Associated",
+      "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 20,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
@@ -51,13 +51,43 @@
     {
       "Name": "Markets.Valid",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Prematch",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Markets.Valid.Inplay",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.FeedSuspension.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "BlackWidow.Items",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "DI.InPlayMarket.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.PreMatchMarket.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     }
   ]
