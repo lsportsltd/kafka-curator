@@ -5,7 +5,7 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
-    }
+    },
     //     {
     //       "Name": "BlackWidow.Raw",
     //       "ReplicationFactor": 3,
@@ -48,36 +48,30 @@
     //       "NumOfPartitions": 10,
     //       "CleanupPolicy": "delete"
     //     },
-    //     {
-    //       "Name": "Markets.Valid",
-    //       "ReplicationFactor": 3,
-    //       "NumOfPartitions": 10,
-    //       "CleanupPolicy": "delete"
-    //     },
-    //     {
-    //       "Name": "Markets.Valid.Prematch",
-    //       "ReplicationFactor": 3,
-    //       "NumOfPartitions": 10,
-    //       "CleanupPolicy": "delete"
-    //     },
-    //     {
-    //       "Name": "Markets.Valid.Inplay",
-    //       "ReplicationFactor": 3,
-    //       "NumOfPartitions": 10,
-    //       "CleanupPolicy": "delete"
-    //     },
-    //     {
-    //       "Name": "DI.InPlayMarket.Valid",
-    //       "ReplicationFactor": 3,
-    //       "NumOfPartitions": 10,
-    //       "CleanupPolicy": "delete"
-    //     },
-    //     {
-    //       "Name": "DI.PreMatchMarket.Valid",
-    //       "ReplicationFactor": 3,
-    //       "NumOfPartitions": 10,
-    //       "CleanupPolicy": "delete"
-    //     },
+        {
+          "Name": "DATA.PreMatchMarket.Raw",
+          "ReplicationFactor": 3,
+          "NumOfPartitions": 10,
+          "CleanupPolicy": "delete"
+        },
+        {
+          "Name": "DATA.InPlayMarket.Raw",
+          "ReplicationFactor": 3,
+          "NumOfPartitions": 10,
+          "CleanupPolicy": "delete"
+        },
+        {
+          "Name": "DI.InPlayMarket.Valid",
+          "ReplicationFactor": 3,
+          "NumOfPartitions": 10,
+          "CleanupPolicy": "delete"
+        },
+        {
+          "Name": "DI.PreMatchMarket.Valid",
+          "ReplicationFactor": 3,
+          "NumOfPartitions": 10,
+          "CleanupPolicy": "delete"
+        },
     //     {
     //       "Name": "DATA.ProviderFixture.Full",
     //       "ReplicationFactor": 3,
