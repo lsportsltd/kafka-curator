@@ -1,11 +1,11 @@
 ﻿{
   "topics": [
-    {
-      "Name": "BlackWidow.Items",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 100,
-      "CleanupPolicy": "compact"
-    },
+    // {
+    //   "Name": "BlackWidow.Items",
+    //   "ReplicationFactor": 3,
+    //   "NumOfPartitions": 100,
+    //   "CleanupPolicy": "compact"
+    // },
     {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
@@ -66,48 +66,48 @@
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
-    // {
-    //   "Name": "DATA.ProviderFixture.Full",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "DI.ProviderFixture.Valid",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "Livescore.Delta",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "compact"
-    // },
-    // {
-    //   "Name": "Livescore.Buffer",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "Livescore.Buffer.Expired",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "STM.FeedSuspension.Changed",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "STM.Subscription.Handled",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 3,
-    //   "CleanupPolicy": "delete"
-    // },
+    {
+      "Name": "DATA.ProviderFixture.Full",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.Valid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Livescore.Delta",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "Livescore.Buffer",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Livescore.Buffer.Expired",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.FeedSuspension.Changed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Subscription.Handled",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
     {
       "Name": "STM.Markets.Settings.Maintenance",
       "ReplicationFactor": 3,
