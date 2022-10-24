@@ -67,27 +67,27 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "Markets.Valid.Prematch",
+      "Name": "DATA.PreMatchMarket.Raw",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "Markets.Valid.Inplay",
+      "Name": "DATA.InPlayMarket.Raw",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.InPlayMarket.Valid",
+      "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.PreMatchMarket.Valid",
+      "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
     {
