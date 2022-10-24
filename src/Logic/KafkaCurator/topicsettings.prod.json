@@ -61,13 +61,13 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.InPlayMarket.Valid",
+      "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.PreMatchMarket.Valid",
+      "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
