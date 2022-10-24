@@ -1,154 +1,154 @@
 ﻿{
-//   "topics": [
-//     {
-//       "Name": "BlackWidow.Items",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 100,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "BlackWidow.Raw",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 100,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "DI.Fixture",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.Fixture.Refined",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.Fixture.Associated",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "DI.Livescore",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.Livescore.Refined",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "STM.Livescore.Associated",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "Markets.Valid",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "Markets.Valid.Prematch",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "Markets.Valid.Inplay",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "DI.InPlayMarket.Valid",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "DI.PreMatchMarket.Valid",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 10,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "DATA.ProviderFixture.Full",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "DI.ProviderFixture.Valid",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "Livescore.Delta",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "Livescore.Buffer",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "Livescore.Buffer.Expired",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.FeedSuspension.Changed",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.Subscription.Handled",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "STM.Markets.Settings.Maintenance",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "STM.Markets.Settings.Changed",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "delete"
-//     },
-//     {
-//       "Name": "OCR.FullFrame",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "OCR.ScoreboardFrame",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "compact"
-//     },
-//     {
-//       "Name": "OCR.ResultJson",
-//       "ReplicationFactor": 3,
-//       "NumOfPartitions": 3,
-//       "CleanupPolicy": "compact"
-//     }
-//   ]
+  "topics": [
+    {
+      "Name": "BlackWidow.Items",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 100,
+      "CleanupPolicy": "compact"
+    }
+    //     {
+    //       "Name": "BlackWidow.Raw",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 100,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "DI.Fixture",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.Fixture.Refined",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.Fixture.Associated",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "DI.Livescore",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.Livescore.Refined",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "STM.Livescore.Associated",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "Markets.Valid",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "Markets.Valid.Prematch",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "Markets.Valid.Inplay",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "DI.InPlayMarket.Valid",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "DI.PreMatchMarket.Valid",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 10,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "DATA.ProviderFixture.Full",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "DI.ProviderFixture.Valid",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "Livescore.Delta",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "Livescore.Buffer",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "Livescore.Buffer.Expired",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.FeedSuspension.Changed",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.Subscription.Handled",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "STM.Markets.Settings.Maintenance",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "STM.Markets.Settings.Changed",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "delete"
+    //     },
+    //     {
+    //       "Name": "OCR.FullFrame",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "OCR.ScoreboardFrame",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "compact"
+    //     },
+    //     {
+    //       "Name": "OCR.ResultJson",
+    //       "ReplicationFactor": 3,
+    //       "NumOfPartitions": 3,
+    //       "CleanupPolicy": "compact"
+    //     }
+  ]
 }
