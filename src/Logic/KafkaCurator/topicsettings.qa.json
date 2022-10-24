@@ -1,4 +1,4 @@
-﻿// {
+﻿{
 //   "topics": [
 //     {
 //       "Name": "BlackWidow.Items",
@@ -151,4 +151,4 @@
 //       "CleanupPolicy": "compact"
 //     }
 //   ]
-// }
+}
