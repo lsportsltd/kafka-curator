@@ -24,48 +24,48 @@
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
     },
+    // {
+    //   "Name": "DI.Livescore",
+    //   "ReplicationFactor": 3,
+    //   "NumOfPartitions": 10,
+    //   "CleanupPolicy": "delete"
+    // },
+    // {
+    //   "Name": "STM.Livescore.Refined",
+    //   "ReplicationFactor": 3,
+    //   "NumOfPartitions": 10,
+    //   "CleanupPolicy": "compact"
+    // },
+    // {
+    //   "Name": "STM.Livescore.Associated",
+    //   "ReplicationFactor": 3,
+    //   "NumOfPartitions": 10,
+    //   "CleanupPolicy": "delete"
+    // },
     {
-      "Name": "DI.Livescore",
+      "Name": "DATA.PreMatchMarket.Raw",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Livescore.Refined",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.Livescore.Associated",
+      "Name": "DATA.InPlayMarket.Raw",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
-    // {
-    //   "Name": "DATA.PreMatchMarket.Raw",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 10,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "DATA.InPlayMarket.Raw",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 10,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "DI.InPlayMarket.Outliered",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 10,
-    //   "CleanupPolicy": "delete"
-    // },
-    // {
-    //   "Name": "DI.PreMatchMarket.Outliered",
-    //   "ReplicationFactor": 3,
-    //   "NumOfPartitions": 10,
-    //   "CleanupPolicy": "delete"
-    // },
+    {
+      "Name": "DI.InPlayMarket.Outliered",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.PreMatchMarket.Outliered",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
     {
       "Name": "DATA.ProviderFixture.Full",
       "ReplicationFactor": 3,
