@@ -6,12 +6,12 @@
       "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
     },
-    {
-      "Name": "DI.Fixture",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "delete"
-    },
+    // {
+    //   "Name": "DI.Fixture",
+    //   "ReplicationFactor": 3,
+    //   "NumOfPartitions": 3,
+    //   "CleanupPolicy": "delete"
+    // },
     {
       "Name": "STM.Fixture.Refined",
       "ReplicationFactor": 3,
