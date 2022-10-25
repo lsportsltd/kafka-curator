@@ -181,6 +181,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "OCR.Validity",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DATA.Markets.PreMatch",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
