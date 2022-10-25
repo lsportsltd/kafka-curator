@@ -1,11 +1,11 @@
 ﻿{
   "topics": [
-    // {
-    //   "Name": "BlackWidow.Items",
-    //   "ReplicationFactor": 1,
-    //   "NumOfPartitions": 100,
-    //   "CleanupPolicy": "delete"
-    // },
+    {
+      "Name": "BlackWidow.Items",
+      "ReplicationFactor": 1,
+      "NumOfPartitions": 100,
+      "CleanupPolicy": "delete"
+    },
     {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
