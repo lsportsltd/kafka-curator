@@ -4,7 +4,7 @@
       "Name": "BlackWidow.Items",
       "ReplicationFactor": 1,
       "NumOfPartitions": 100,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "DI.Fixture",
