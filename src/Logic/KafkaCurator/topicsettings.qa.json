@@ -2,7 +2,7 @@
   "topics": [
     {
       "Name": "BlackWidow.Items",
-      "ReplicationFactor": 3,
+      "ReplicationFactor": 1,
       "NumOfPartitions": 100,
       "CleanupPolicy": "compact"
     },
