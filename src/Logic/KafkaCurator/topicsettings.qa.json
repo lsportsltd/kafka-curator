@@ -151,7 +151,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "OCR.Validity",
+      "Name": "OCR.Invalid",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
