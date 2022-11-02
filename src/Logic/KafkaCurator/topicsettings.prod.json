@@ -83,12 +83,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "BlackWidow.Items",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 50,
-      "CleanupPolicy": "compact"
     }
+    // {
+    //   "Name": "BlackWidow.Items",
+    //   "ReplicationFactor": 1,
+    //   "NumOfPartitions": 50,
+    //   "CleanupPolicy": "delete"
+    // }
   ]
 }
