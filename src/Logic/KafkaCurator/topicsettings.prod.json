@@ -57,13 +57,13 @@
     {
       "Name": "DATA.PreMatchMarket.Raw",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "DATA.InPlayMarket.Raw",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 50,
       "CleanupPolicy": "delete"
     },
     {
