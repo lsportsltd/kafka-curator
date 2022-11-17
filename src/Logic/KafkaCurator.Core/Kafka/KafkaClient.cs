@@ -25,8 +25,11 @@ namespace KafkaCurator.Core.Kafka
 
         public Dictionary<string, TopicMetadata> GetKafkaTopics()
         {
-            return _adminClient.GetMetadata(TimeSpan.FromSeconds(30)).Topics.Where(t => !t.Topic.StartsWith("__") && !t.Topic.StartsWith("hermes-s3-sink-main-connect-cluster"))
-                .ToDictionary(t => t.Topic, t => t);
+            var pattensToExclude = _configuration.GetSection(TopicPattern.ToExclude).Get<string[]>();
+            var topics = _adminClient.GetMetadata(TimeSpan.FromSeconds(30)).Topics;
+            var relevantTopics = topics.Where(t => pattensToExclude.All(pattern => !t.Topic.StartsWith(pattern)));
+
+            return relevantTopics.ToDictionary(t => t.Topic, t => t);
         }
 
         public Task DeleteTopicAsync(string[] topics)
