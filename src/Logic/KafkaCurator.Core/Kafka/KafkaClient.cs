@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 using Confluent.Kafka.Admin;
+using KafkaCurator.Core.Constants;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace KafkaCurator.Core.Kafka
@@ -11,17 +13,19 @@ namespace KafkaCurator.Core.Kafka
     public class KafkaClient : IKafkaClient
     {
         private readonly ILogger<IKafkaClient> _logger;
+        private readonly IConfiguration _configuration;
         private readonly IAdminClient _adminClient;
 
-        public KafkaClient(string bootstrapServers, ILogger<IKafkaClient> logger)
+        public KafkaClient(string bootstrapServers, ILogger<IKafkaClient> logger, IConfiguration configuration)
         {
             _logger = logger;
+            _configuration = configuration;
             _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = bootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
         }
 
         public Dictionary<string, TopicMetadata> GetKafkaTopics()
         {
-            return _adminClient.GetMetadata(TimeSpan.FromSeconds(30)).Topics.Where(t => !t.Topic.StartsWith("__"))
+            return _adminClient.GetMetadata(TimeSpan.FromSeconds(30)).Topics.Where(t => !t.Topic.StartsWith("__") && !t.Topic.StartsWith("hermes-s3-sink-main-connect-cluster"))
                 .ToDictionary(t => t.Topic, t => t);
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using KafkaCurator.Core.Kafka;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
@@ -17,8 +18,9 @@ namespace KafkaCurator.Extensions
             services.AddSingleton<IKafkaClient>(provider =>
             {
                 var logger = provider.GetRequiredService<ILogger<IKafkaClient>>();
-
-                return new KafkaClient(clientOptions.BootstrapServers, logger);
+                var configuration = provider.GetRequiredService<IConfiguration>();
+                
+                return new KafkaClient(clientOptions.BootstrapServers, logger, configuration);
             });
 
             return services;
