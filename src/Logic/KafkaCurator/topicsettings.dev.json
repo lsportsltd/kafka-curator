@@ -25,9 +25,9 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.Items",
+      "Name": "BlackWidow.Item.Internal",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 50,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     },
     {
@@ -59,12 +59,6 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "BlackWidow.Raw",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
     },
     {
       "Name": "Markets.Valid",
