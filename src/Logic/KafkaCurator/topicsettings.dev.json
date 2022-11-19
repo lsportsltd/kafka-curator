@@ -25,12 +25,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "BlackWidow.Item.Internal",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
