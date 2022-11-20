@@ -37,10 +37,6 @@ namespace KafkaCurator
                 configTopics = Array.Empty<Topic>();
             }
 
-            var testTopic = topicMetadata.First();
-
-            var desription = await _kafkaClient.DescribeTopicConfigAsync(testTopic.Key);
-
             _logger.LogInformation($"Found {configTopics.Length} topics within configuration...");
             _logger.LogInformation($"Found {topicMetadata.Count} topics within Kafka...");
 
@@ -86,10 +82,10 @@ namespace KafkaCurator
                 }
             }
 
-            var compressionType = topic?.CompressionType?.ToString().ToLower();
+            var compressionType = topic.CompressionType.ToString().ToLower();
             if (configs.Entries.TryGetValue("compression.type", out var compressionTypeEntry))
             {
-                if (!string.IsNullOrEmpty(compressionType) && compressionTypeEntry.Value != compressionType)
+                if (compressionTypeEntry.Value != compressionType)
                 {
                     result = true;
                     alterInfo.ShouldAlterCompression = true;

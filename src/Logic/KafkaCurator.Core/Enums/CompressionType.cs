@@ -2,9 +2,10 @@
 {
     public enum CompressionType
     {
+        Zstd,
         Gzip,
         Snappy,
         Lz4,
-        Zstd
+        Producer
     }
 }

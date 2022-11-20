@@ -3,7 +3,7 @@
     "KafkaCurator": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "qa"
+        "ASPNETCORE_ENVIRONMENT": "dev"
       }
     },
     "Docker": {

@@ -4,8 +4,7 @@
       "Name": "Livescore.Active",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact",
-      "CompressionType": "snappy"
+      "CleanupPolicy": "compact"
     },
     {
       "Name": "Livescore.Delta",
@@ -29,7 +28,8 @@
       "Name": "BlackWidow.Item.Internal",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "CompressionType" : "producer"
     },
     {
       "Name": "DI.Fixture",
