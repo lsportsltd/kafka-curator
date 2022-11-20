@@ -73,12 +73,22 @@ namespace KafkaCurator
             if (configs == null) return (result, alterInfo);
 
             var cleanupPolicy = topic.CleanupPolicy.ToString().ToLower();
-            if (configs.Entries.TryGetValue("cleanup.policy", out var entry))
+            if (configs.Entries.TryGetValue("cleanup.policy", out var cleanupPolicyEntry))
             {
-                if (entry.Value != cleanupPolicy)
+                if (cleanupPolicyEntry.Value != cleanupPolicy)
                 {
                     result = true;
                     alterInfo.ShouldAlterCleanupPolicy = true;
+                }
+            }
+
+            var compressionType = topic.CompressionType.ToString().ToLower();
+            if (configs.Entries.TryGetValue("compression.type", out var compressionTypeEntry))
+            {
+                if (compressionTypeEntry.Value != compressionType)
+                {
+                    result = true;
+                    alterInfo.ShouldAlterCompression = true;
                 }
             }
 

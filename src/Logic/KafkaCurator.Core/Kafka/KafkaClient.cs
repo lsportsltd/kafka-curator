@@ -16,11 +16,11 @@ namespace KafkaCurator.Core.Kafka
         private readonly IConfiguration _configuration;
         private readonly IAdminClient _adminClient;
 
-        public KafkaClient(string bootstrapServers, ILogger<IKafkaClient> logger, IConfiguration configuration)
+        public KafkaClient(KafkaClientOptions clientOptions, ILogger<IKafkaClient> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
-            _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = bootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
+            _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = clientOptions.BootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
         }
 
         public Dictionary<string, TopicMetadata> GetKafkaTopics()
@@ -82,10 +82,7 @@ namespace KafkaCurator.Core.Kafka
                     await AlterTopicPartitionAsync(topic);
                 }
 
-                if (alterInfo.ShouldAlterCleanupPolicy)
-                {
-                    await AlterCleanupPolicy(topic);
-                }
+                await HandleConfigEntriesAlteration(topic, alterInfo);
             }
         }
 
@@ -123,36 +120,43 @@ namespace KafkaCurator.Core.Kafka
             return result.FirstOrDefault();
         }
 
-        private Task AlterCleanupPolicy(Topic topic)
+        private Task HandleConfigEntriesAlteration(Topic topic, AlterTopicInfo alterInfo)
         {
-            _logger.LogInformation($"Altering cleanup.policy for topic: {topic.Name}, new policy: {topic.CleanupPolicy.ToString().ToLower()}");
+            if (!alterInfo.ShouldAlterCleanupPolicy && !alterInfo.ShouldAlterCompression) return Task.CompletedTask;
 
-            var configs = GetCleanupPolicyConfigs(topic);
-
-            return _adminClient.AlterConfigsAsync(configs,
-                new AlterConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
-        }
-
-        private Dictionary<ConfigResource, List<ConfigEntry>> GetCleanupPolicyConfigs(Topic topic)
-        {
+            var configEntries = new List<ConfigEntry>();
+            
+            _logger.LogInformation($"Altering configs for topic {topic.Name}\r\n" +
+                                   $"cleanup.policy: {topic.CleanupPolicy.ToString().ToLower()}\r\n" +
+                                   $"compression.type: {topic.CompressionType.ToString().ToLower()}");
+            
+            configEntries.Add(GetConfigEntry("cleanup.policy", topic.CleanupPolicy.ToString().ToLower()));
+            configEntries.Add(GetConfigEntry("compression.type", topic.CompressionType.ToString().ToLower()));
+            
             var configResource = new ConfigResource
             {
                 Name = topic.Name,
                 Type = ResourceType.Topic
             };
+            
+            var configs = new Dictionary<ConfigResource, List<ConfigEntry>>
+            {
+                { configResource, configEntries }
+            };
 
+            return _adminClient.AlterConfigsAsync(configs,
+                new AlterConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
+        }
+
+        private ConfigEntry GetConfigEntry(string entryName, string value)
+        {
             var configEntry = new ConfigEntry
             {
-                Name = "cleanup.policy",
-                Value = topic.CleanupPolicy.ToString().ToLower()
+                Name = entryName,
+                Value = value
             };
 
-            var dictionary = new Dictionary<ConfigResource, List<ConfigEntry>>
-            {
-                { configResource, new List<ConfigEntry> { configEntry } }
-            };
-
-            return dictionary;
+            return configEntry;
         }
     }
 }

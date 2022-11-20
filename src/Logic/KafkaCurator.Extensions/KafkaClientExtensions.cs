@@ -14,21 +14,18 @@ namespace KafkaCurator.Extensions
 
             var clientOptions = new KafkaClientOptions();
             options.Invoke(clientOptions);
+            
+            clientOptions.SanityCheck();
 
             services.AddSingleton<IKafkaClient>(provider =>
             {
                 var logger = provider.GetRequiredService<ILogger<IKafkaClient>>();
                 var configuration = provider.GetRequiredService<IConfiguration>();
                 
-                return new KafkaClient(clientOptions.BootstrapServers, logger, configuration);
+                return new KafkaClient(clientOptions, logger, configuration);
             });
 
             return services;
         }
-    }
-
-    public class KafkaClientOptions
-    {
-        public string BootstrapServers { get; set; }
     }
 }
