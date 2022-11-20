@@ -194,6 +194,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "STM.StartDateLimit.Maintenance",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.Markets.Settings.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
