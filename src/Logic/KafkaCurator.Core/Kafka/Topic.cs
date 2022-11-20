@@ -8,5 +8,6 @@ namespace KafkaCurator.Core.Kafka
         public short ReplicationFactor { get; set; }
         public int NumOfPartitions { get; set; }
         public CleanupPolicy CleanupPolicy { get; set; }
+        public CompressionType? CompressionType { get; set; }
     }
 }

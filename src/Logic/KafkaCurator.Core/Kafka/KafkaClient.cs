@@ -16,11 +16,11 @@ namespace KafkaCurator.Core.Kafka
         private readonly IConfiguration _configuration;
         private readonly IAdminClient _adminClient;
 
-        public KafkaClient(string bootstrapServers, ILogger<IKafkaClient> logger, IConfiguration configuration)
+        public KafkaClient(KafkaClientOptions clientOptions, ILogger<IKafkaClient> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
-            _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = bootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
+            _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = clientOptions.BootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
         }
 
         public Dictionary<string, TopicMetadata> GetKafkaTopics()

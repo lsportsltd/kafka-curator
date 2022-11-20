@@ -4,7 +4,8 @@
       "Name": "Livescore.Active",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "CompressionType": "snappy"
     },
     {
       "Name": "Livescore.Delta",
