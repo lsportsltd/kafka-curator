@@ -25,13 +25,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.StartDateLimit.Competition.Maintenance",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.StartDateLimit.League.Maintenance",
+      "Name": "STM.StartDateLimit.Maintenance",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
