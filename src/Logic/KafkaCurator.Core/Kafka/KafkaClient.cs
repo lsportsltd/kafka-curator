@@ -20,7 +20,8 @@ namespace KafkaCurator.Core.Kafka
         {
             _logger = logger;
             _configuration = configuration;
-            _adminClient = new AdminClientBuilder(new AdminClientConfig { BootstrapServers = clientOptions.BootstrapServers, SecurityProtocol = SecurityProtocol.Ssl }).Build();
+            _adminClient = new AdminClientBuilder(new AdminClientConfig
+                {BootstrapServers = clientOptions.BootstrapServers, SecurityProtocol = SecurityProtocol.Ssl}).Build();
         }
 
         public Dictionary<string, TopicMetadata> GetKafkaTopics()
@@ -40,7 +41,8 @@ namespace KafkaCurator.Core.Kafka
 
         public Task AlterTopicPartitionAsync(Topic topic)
         {
-            _logger.LogInformation($"Altering num of partitions for topic: {topic.Name}, num of partitions: {topic.NumOfPartitions}");
+            _logger.LogInformation(
+                $"Altering num of partitions for topic: {topic.Name}, num of partitions: {topic.NumOfPartitions}");
 
             var partitionsSpecifications = new List<PartitionsSpecification>();
 
@@ -97,7 +99,11 @@ namespace KafkaCurator.Core.Kafka
                     Name = topic.Name,
                     NumPartitions = topic.NumOfPartitions,
                     ReplicationFactor = topic.ReplicationFactor,
-                    Configs = new Dictionary<string, string> { { "cleanup.policy", topic.CleanupPolicy.ToString().ToLower() } }
+                    Configs = new Dictionary<string, string>
+                    {
+                        {"cleanup.policy", topic.CleanupPolicy.ToString().ToLower()},
+                        {"compression.type", topic.CompressionType.ToString().ToLower()}
+                    }
                 };
 
                 newTopics.Add(topicSpecs);
@@ -114,8 +120,8 @@ namespace KafkaCurator.Core.Kafka
                 Type = ResourceType.Topic
             };
 
-            var result = await _adminClient.DescribeConfigsAsync(new List<ConfigResource> { configResource },
-                new DescribeConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
+            var result = await _adminClient.DescribeConfigsAsync(new List<ConfigResource> {configResource},
+                new DescribeConfigsOptions {RequestTimeout = TimeSpan.FromSeconds(30)});
 
             return result.FirstOrDefault();
         }
@@ -125,27 +131,27 @@ namespace KafkaCurator.Core.Kafka
             if (!alterInfo.ShouldAlterCleanupPolicy && !alterInfo.ShouldAlterCompression) return Task.CompletedTask;
 
             var configEntries = new List<ConfigEntry>();
-            
+
             _logger.LogInformation($"Altering configs for topic {topic.Name}\r\n" +
                                    $"cleanup.policy: {topic.CleanupPolicy.ToString().ToLower()}\r\n" +
                                    $"compression.type: {topic.CompressionType.ToString().ToLower()}");
-            
+
             configEntries.Add(GetConfigEntry("cleanup.policy", topic.CleanupPolicy.ToString().ToLower()));
             configEntries.Add(GetConfigEntry("compression.type", topic.CompressionType.ToString().ToLower()));
-            
+
             var configResource = new ConfigResource
             {
                 Name = topic.Name,
                 Type = ResourceType.Topic
             };
-            
+
             var configs = new Dictionary<ConfigResource, List<ConfigEntry>>
             {
-                { configResource, configEntries }
+                {configResource, configEntries}
             };
 
             return _adminClient.AlterConfigsAsync(configs,
-                new AlterConfigsOptions { RequestTimeout = TimeSpan.FromSeconds(30) });
+                new AlterConfigsOptions {RequestTimeout = TimeSpan.FromSeconds(30)});
         }
 
         private ConfigEntry GetConfigEntry(string entryName, string value)
