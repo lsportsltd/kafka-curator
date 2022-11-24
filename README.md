@@ -13,8 +13,8 @@ Configuration File per Environments:
 * PROD - ./src/Logic/KafkaCurator/topicsettings.prod.json
 
 ## CI\CD
-Pipeline is triggered in Azure Devops 'Jobs' project
-https://dev.azure.com/lsportsltd/Jobs/_build?definitionId=579&_a=summary 
+Pipeline is triggered in Azure Devops 'Jobs'(https://dev.azure.com/lsportsltd/Jobs/_build?definitionId=579&_a=summary)  project
+
 
 ## PR Code review & pipeline approvals 
   Approvers 
