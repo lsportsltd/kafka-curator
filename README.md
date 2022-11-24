@@ -12,11 +12,11 @@ Configuration File per Environments:
 * QA - ./src/Logic/KafkaCurator/topicsettings.qa.json
 * PROD - ./src/Logic/KafkaCurator/topicsettings.prod.json
 
-#CI\CD
+## CI\CD
 Pipeline is triggered in Azure Devops 'Jobs' project
 https://dev.azure.com/lsportsltd/Jobs/_build?definitionId=579&_a=summary 
 
-#PR Code review & pipeline approvals 
+## PR Code review & pipeline approvals 
   Approvers 
   * Team leaders 
   * Architects 
