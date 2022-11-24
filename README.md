@@ -2,7 +2,7 @@
 
 ## Description 
 
-Manage environment (DEV\QA\Prod) Kafka topics:
+Manage environments (DEV\QA\Prod) Kafka topics:
 * Adding topics
 * Alter topics to suite configuration 
 * Delete unexlude topics
