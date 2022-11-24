@@ -156,6 +156,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "DI.PlayersManger.Mapping",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
