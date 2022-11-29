@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaCurator", "src\KafkaCurator\KafkaCurator.csproj", "{D618F73F-E55C-4EE4-9CBB-B14F70F1934F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaCurator.Abstractions", "src\KafkaCurator.Abstractions\KafkaCurator.Abstractions.csproj", "{C78B6374-A627-40B7-B9D5-B81E2E7A2ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafkaCurator.Extensions.DependencyInjection", "src\KafkaCurator.Extensions.DependencyInjection\KafkaCurator.Extensions.DependencyInjection.csproj", "{0FB4DC37-E483-474C-B838-65FCF9E69DAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D618F73F-E55C-4EE4-9CBB-B14F70F1934F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D618F73F-E55C-4EE4-9CBB-B14F70F1934F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D618F73F-E55C-4EE4-9CBB-B14F70F1934F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D618F73F-E55C-4EE4-9CBB-B14F70F1934F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C78B6374-A627-40B7-B9D5-B81E2E7A2ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C78B6374-A627-40B7-B9D5-B81E2E7A2ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C78B6374-A627-40B7-B9D5-B81E2E7A2ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C78B6374-A627-40B7-B9D5-B81E2E7A2ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB4DC37-E483-474C-B838-65FCF9E69DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB4DC37-E483-474C-B838-65FCF9E69DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB4DC37-E483-474C-B838-65FCF9E69DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB4DC37-E483-474C-B838-65FCF9E69DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
