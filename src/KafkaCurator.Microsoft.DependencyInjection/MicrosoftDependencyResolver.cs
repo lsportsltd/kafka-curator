@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using KafkaCurator.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KafkaCurator.Extensions.DependencyInjection
+namespace KafkaCurator.Microsoft.DependencyInjection
 {
     public class MicrosoftDependencyResolver : IDependencyResolver
     {

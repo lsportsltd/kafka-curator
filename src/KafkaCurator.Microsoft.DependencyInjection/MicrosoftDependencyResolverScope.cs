@@ -1,7 +1,7 @@
 ﻿using KafkaCurator.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KafkaCurator.Extensions.DependencyInjection
+namespace KafkaCurator.Microsoft.DependencyInjection
 {
     public class MicrosoftDependencyResolverScope : IDependencyResolverScope
     {
