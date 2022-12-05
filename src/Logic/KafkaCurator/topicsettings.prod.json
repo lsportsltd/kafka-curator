@@ -120,6 +120,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 6,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Subscription.Handled",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
