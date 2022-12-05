@@ -114,6 +114,12 @@
       "NumOfPartitions": 100,
       "CleanupPolicy": "delete",
       "CompressionType": "producer"
+    },
+    {
+      "Name": "DI.PlayersManger.Mapping",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
