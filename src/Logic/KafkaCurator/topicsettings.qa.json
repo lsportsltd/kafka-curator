@@ -160,7 +160,7 @@
     {
       "Name": "DI.PlayersManger.Mapping",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "NumOfPartitions": 4,
       "CleanupPolicy": "delete"
     }
   ]
