@@ -116,6 +116,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.Fixture.Distributed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.Markets.Settings.Maintenance",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
