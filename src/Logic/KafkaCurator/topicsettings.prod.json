@@ -116,6 +116,12 @@
       "CompressionType": "producer"
     },
     {
+      "Name": "DI.PlayersManger.Mapping",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 6,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "OCR.FullFrame",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
