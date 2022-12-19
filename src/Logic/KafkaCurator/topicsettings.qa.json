@@ -5,7 +5,7 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete",
-      "CompressionType": "producer"
+      "CompressionType" : "producer"
     },
     {
       "Name": "DI.Fixture",
