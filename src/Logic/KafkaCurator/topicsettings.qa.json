@@ -5,7 +5,7 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete",
-      "CompressionType" : "producer"
+      "CompressionType": "producer"
     },
     {
       "Name": "DI.Fixture",
@@ -162,6 +162,12 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "OCR.Invalid",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "DI.PlayersManger.Mapping",
