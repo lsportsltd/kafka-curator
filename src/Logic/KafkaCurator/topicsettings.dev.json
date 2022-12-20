@@ -29,7 +29,7 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
       "CleanupPolicy": "delete",
-      "CompressionType" : "producer"
+      "CompressionType": "producer"
     },
     {
       "Name": "DI.Fixture",
@@ -213,6 +213,18 @@
     },
     {
       "Name": "DI.PlayersManger.Mapping",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.InPlayMarket.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
