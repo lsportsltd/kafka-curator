@@ -91,22 +91,10 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Markets.Settings.Maintenance",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "STM.MarketSettings.Maintenance",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.Markets.Settings.Changed",
-      "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
-      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.MarketSettings.Changed",
