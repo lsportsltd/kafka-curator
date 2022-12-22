@@ -97,7 +97,19 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "STM.MarketSettings.Maintenance",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "STM.Markets.Settings.Changed",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.MarketSettings.Changed",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "delete"
@@ -149,6 +161,18 @@
       "Name": "STM.Subscription.Handled",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.InPlayMarket.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Refined",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 10,
       "CleanupPolicy": "delete"
     }
   ]
