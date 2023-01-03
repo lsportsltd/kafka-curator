@@ -169,6 +169,7 @@
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact"
     },
+    {
       "Name": "STM.InPlayMarket.ValidateAssociation",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
