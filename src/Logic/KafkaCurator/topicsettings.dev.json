@@ -7,6 +7,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "DATA.Livescore.Raw",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "Livescore.Delta",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,

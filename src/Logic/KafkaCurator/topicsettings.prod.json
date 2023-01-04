@@ -31,6 +31,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DATA.Livescore.Raw",
+      "ReplicationFactor": 3,
+      "NumOfPartitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
       "NumOfPartitions": 10,
