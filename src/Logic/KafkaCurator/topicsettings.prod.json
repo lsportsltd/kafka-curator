@@ -75,7 +75,7 @@
     {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 20,
       "CleanupPolicy": "delete"
     },
     {
@@ -160,7 +160,7 @@
     {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 20,
       "CleanupPolicy": "delete"
     },
     {
@@ -190,7 +190,7 @@
     {
       "Name": "STM.InPlayMarket.Associated",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 10,
+      "NumOfPartitions": 20,
       "CleanupPolicy": "delete"
     },
     {
