@@ -1,0 +1,10 @@
+{
+    "Topics": [
+        {
+            "Name": "Hello.World",
+            "ReplicationFactor": 3,
+            "Partitions": 3,
+            "CleanupPolicy": "compact"
+        }
+    ]
+}
