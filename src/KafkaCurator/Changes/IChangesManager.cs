@@ -6,6 +6,7 @@ namespace KafkaCurator.Changes
 {
     public interface IChangesManager
     {
-        Task Handle(IReadOnlyList<ITopicConfiguration> topicConfiguration, IReadOnlyList<ITopicConfiguration> currentState);
+        public string Name { get; }
+        Task HandleChanges(IReadOnlyList<ITopicConfiguration> topics);
     }
 }

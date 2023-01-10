@@ -27,7 +27,7 @@ namespace KafkaCurator.Abstractions
         /// </summary>
         /// <param name="message">Info message</param>
         /// <param name="data">Additional data related to the info log</param>
-        void Info(string message, object data);
+        void Info(string message, object data = null);
 
         /// <summary>
         /// Writes a verbose log entry

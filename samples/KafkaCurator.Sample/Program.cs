@@ -1,27 +1,26 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using Confluent.Kafka;
+﻿using Confluent.Kafka;
 using KafkaCurator.Extensions.Microsoft.DependencyInjection;
+using KafkaCurator.LogHandler.Console;
 using Microsoft.Extensions.DependencyInjection;
+using SecurityProtocol = KafkaCurator.Abstractions.Configuration.SecurityProtocol;
 
 var services = new ServiceCollection();
 
 services.AddKafkaCurator(kafka => kafka
+    .UseConsoleLog()
     .AddCluster(cluster => cluster
-        .WithBrokers("")
+        .WithBrokers("localhost:9094")
+        .WithSecurityInformation(information => information.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changesManager => changesManager
             .WithAdminConfig(new AdminClientConfig())
             .WithTopicPrefixToExclude("__")
-            .WithTopicPrefixToExclude("cdc")
+            .WithTopicPrefixToExclude("kafka-s3-sink")
             .WithTimeout(TimeSpan.FromSeconds(15)))
-        .AddTopic(topic => topic
-            .Name("someTopic")
-            .WithNumberOfPartitions(3)
-        )
-        .AddTopicsJsonFile("topics.json")));
+        .AddTopicsJsonFile("topics.json")
+    ));
 
 var provider = services.BuildServiceProvider();
 
 var curator = provider.CreateCurator();
 
-await curator.ExecuteAsync();
+return await curator.ExecuteAsync();

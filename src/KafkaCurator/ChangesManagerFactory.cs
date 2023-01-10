@@ -6,12 +6,9 @@ namespace KafkaCurator
 {
     public class ChangesManagerFactory : IChangesManagerFactory
     {
-        public IChangesManager Create(IChangesManagerConfiguration configuration, IDependencyResolver resolver)
+        public IChangesManager Create(ChangesManagerConfiguration configuration, IDependencyResolver resolver)
         {
-            var logHandler = resolver.Resolve<ILogHandler>();
-            var adminClientFactory = resolver.Resolve<IAdminClientFactory>();
-
-            return new ChangesManager(logHandler, configuration, adminClientFactory);
+            return new ChangesManager(resolver, configuration);
         }
     }
 }

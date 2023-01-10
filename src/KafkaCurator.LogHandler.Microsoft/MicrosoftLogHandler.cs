@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace KafkaCurator.LogHandler.Microsoft
 {
-    internal class MicrosoftLogHandler : ILogHandler
+    public class MicrosoftLogHandler : ILogHandler
     {
         private readonly ILogger _logger;
 

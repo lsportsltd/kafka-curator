@@ -1,7 +1,8 @@
-using System.Linq;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using KafkaCurator.Abstractions;
+using KafkaCurator.Changes;
 using KafkaCurator.Configuration;
 
 namespace KafkaCurator
@@ -21,26 +22,22 @@ namespace KafkaCurator
             _adminClientFactory = adminClientFactory;
         }
         
-        public async Task ExecuteAsync(CancellationToken stopCancellationToken = default)
+        public async Task<int> ExecuteAsync(CancellationToken stopCancellationToken = default)
         {
+            var changesManagerAccessor = _dependencyResolver.Resolve<IChangesManagerAccessor>();
+            
             foreach (var cluster in _kafkaConfiguration.Clusters)
             {
-                var changesManager = _changesManagerFactory.Create(cluster.ChangesManager, _dependencyResolver);
-                var stateHandler = GetStateConfigurator(cluster).CreateStateHandler(_dependencyResolver);
-
-                var topicsState = await stateHandler.GetStateAsync();
-
-                await changesManager.Handle(cluster.Topics, topicsState.AsReadOnly());
+                var changesManager = changesManagerAccessor.GetChangesManager(cluster.ChangesManager.ClusterName);
+                await changesManager.HandleChanges(cluster.Topics);
             }
+
+            return 0;
         }
 
-        private IStateConfigurator GetStateConfigurator(ClusterConfiguration clusterConfiguration)
+        public Task<int> PreviewAsync(CancellationToken cancellationToken = default)
         {
-            var stateConfigurator = clusterConfiguration.GetStateConfigurator(_dependencyResolver);
-            if (stateConfigurator != null) return stateConfigurator;
-
-            return new DefaultStateConfigurator(_adminClientFactory.GetOrCreate(clusterConfiguration.Name,
-                clusterConfiguration.ChangesManager.AdminClientConfig), clusterConfiguration.ChangesManager.Timeout);
+            throw new System.NotImplementedException();
         }
     }
 }

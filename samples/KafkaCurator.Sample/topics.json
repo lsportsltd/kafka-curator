@@ -1,11 +1,10 @@
 {
     "Topics": [
         {
-            "Name": "topic1",
-            "Partitions": 3,
+            "Name": "Hello.World",
             "ReplicationFactor": 3,
-            "CleanupPolicy": "delete",
-            "CompressionType": "producer"
+            "Partitions": 3,
+            "CleanupPolicy": "compact"
         }
     ]
 }

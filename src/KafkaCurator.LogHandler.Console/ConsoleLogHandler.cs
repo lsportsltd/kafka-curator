@@ -17,20 +17,20 @@ namespace KafkaCurator.LogHandler.Console
                 });
 
             Print(
-                $"\nKafkaFlow: {message} | Data: {JsonSerializer.Serialize(data)} | Exception: {serializedException}",
+                $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)} | Exception: {serializedException}",
                 ConsoleColor.Red);
         }
 
         public void Warning(string message, object data) => Print(
-            $"\nKafkaFlow: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
             ConsoleColor.Yellow);
 
         public void Info(string message, object data) => Print(
-            $"\nKafkaFlow: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
             ConsoleColor.Green);
 
         public void Verbose(string message, object data) => Print(
-            $"\nKafkaFlow: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
             ConsoleColor.Blue);
 
         private static void Print(string message, ConsoleColor color)

@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\KafkaCurator.Extensions.Microsoft.DependencyInjection\KafkaCurator.Extensions.Microsoft.DependencyInjection.csproj" />
+      <ProjectReference Include="..\..\src\KafkaCurator.LogHandler.Console\KafkaCurator.LogHandler.Console.csproj" />
       <ProjectReference Include="..\..\src\KafkaCurator.LogHandler.Microsoft\KafkaCurator.LogHandler.Microsoft.csproj" />
     </ItemGroup>
 

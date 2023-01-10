@@ -6,11 +6,11 @@ using Microsoft.Extensions.Hosting;
 
 namespace KafkaCurator.Extensions.Hosting
 {
-    public class KafkaCuratorBackgroundService : BackgroundService
+    public class KafkaCuratorBackgroundExecutionService : BackgroundService
     {
         private readonly IKafkaCurator _curator;
 
-        public KafkaCuratorBackgroundService(IServiceProvider serviceProvider)
+        public KafkaCuratorBackgroundExecutionService(IServiceProvider serviceProvider)
         {
             _curator = serviceProvider.CreateCurator();
         }

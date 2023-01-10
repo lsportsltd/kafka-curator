@@ -10,7 +10,7 @@ namespace KafkaCurator.Extensions.Hosting
         public static IServiceCollection AddKafkaCuratorBackgroundService(this IServiceCollection services,
             Action<IKafkaConfigurationBuilder> kafka)
         {
-            return services.AddHostedService<KafkaCuratorBackgroundService>()
+            return services.AddHostedService<KafkaCuratorBackgroundExecutionService>()
                 .AddKafkaCurator(kafka);
         }
     }

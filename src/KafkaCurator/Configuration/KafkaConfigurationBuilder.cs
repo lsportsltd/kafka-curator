@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using KafkaCurator.Abstractions;
 using KafkaCurator.Abstractions.Extensions;
+using KafkaCurator.Changes;
+using KafkaCurator.Extensions;
 
 namespace KafkaCurator.Configuration
 {
@@ -46,6 +49,10 @@ namespace KafkaCurator.Configuration
             DependencyConfigurator
                 .AddSingleton<IChangesManagerFactory, ChangesManagerFactory>()
                 .AddSingleton<IAdminClientFactory, AdminClientFactory>()
+                .AddTopicAlterServices()
+                .AddSingleton<IChangesManagerAccessor>(resolver =>
+                    new ChangesManagerAccessor(configuration.Clusters.Select(c => c.ChangesManager)
+                        .Select(cm => new ChangesManager(resolver, cm))))
                 .AddTransient(typeof(ILogHandler), _logHandlerType);
 
             return configuration;

@@ -11,8 +11,15 @@ namespace KafkaCurator
         /// <summary>
         /// Executes Kafka Curator
         /// </summary>
-        /// <param name="stopCancellationToken">A <see cref="T:System.Threading.CancellationToken" /> used to stop the operation.</param>
+        /// <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> used to stop the operation.</param>
         /// <returns></returns>
-        Task ExecuteAsync(CancellationToken stopCancellationToken = default);
+        Task<int> ExecuteAsync(CancellationToken cancellationToken = default);
+        
+        /// <summary>
+        /// Preview Kafka Curator changes
+        /// </summary>
+        /// <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken" /> used to stop the operation.</param>
+        /// <returns></returns>
+        Task<int> PreviewAsync(CancellationToken cancellationToken = default);
     }
 }

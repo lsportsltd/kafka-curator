@@ -6,6 +6,6 @@ namespace KafkaCurator
 {
     public interface IChangesManagerFactory
     {
-        IChangesManager Create(IChangesManagerConfiguration configuration, IDependencyResolver resolver);
+        IChangesManager Create(ChangesManagerConfiguration configuration, IDependencyResolver resolver);
     }
 }

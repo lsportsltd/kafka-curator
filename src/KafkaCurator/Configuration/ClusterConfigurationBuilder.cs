@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using KafkaCurator.Abstractions;
 using KafkaCurator.Abstractions.Configuration;
+using KafkaCurator.Abstractions.Extensions;
 
 namespace KafkaCurator.Configuration
 {
@@ -18,8 +19,7 @@ namespace KafkaCurator.Configuration
         private string _brokers;
         private string _name;
         private Func<SecurityInformation> _securityInformationHandler;
-        private Func<IDependencyResolver, IStateConfigurator> _stateConfigurator;
-        private Action<IChangesConfigurationBuilder> _changesManagerAction;
+        private Action<IChangesManagerConfigurationBuilder> _changesManagerAction;
 
         public ClusterConfigurationBuilder(IDependencyConfigurator dependencyConfigurator)
         {
@@ -57,7 +57,7 @@ namespace KafkaCurator.Configuration
             return this;
         }
 
-        public IClusterConfigurationBuilder ConfigureChangesManager(Action<IChangesConfigurationBuilder> changesManager)
+        public IClusterConfigurationBuilder ConfigureChangesManager(Action<IChangesManagerConfigurationBuilder> changesManager)
         {
             _changesManagerAction = changesManager;
             return this;
@@ -80,12 +80,6 @@ namespace KafkaCurator.Configuration
             return this;
         }
 
-        public IClusterConfigurationBuilder UseStateConfigurator(Func<IDependencyResolver, IStateConfigurator> configurator)
-        {
-            _stateConfigurator = configurator;
-            return this;
-        }
-
         public ClusterConfiguration Build(KafkaConfiguration kafkaConfiguration)
         {
             var clusterConfiguration =
@@ -93,7 +87,6 @@ namespace KafkaCurator.Configuration
             
             clusterConfiguration.AddChangesManager(BuildChangesManager(clusterConfiguration));
             clusterConfiguration.AddTopics(_topics.Select(t => t.Build(clusterConfiguration)));
-            clusterConfiguration.AddStateConfigurator(_stateConfigurator);
             
             foreach (var topicsFile in _topicFiles)
             {
@@ -106,7 +99,7 @@ namespace KafkaCurator.Configuration
 
         private ChangesManagerConfiguration BuildChangesManager(ClusterConfiguration clusterConfiguration)
         {
-            var builder = new ChangesConfigurationBuilder(DependencyConfigurator);
+            var builder = new ChangesManagerManagerConfigurationBuilder(DependencyConfigurator);
             
             _changesManagerAction(builder);
 
