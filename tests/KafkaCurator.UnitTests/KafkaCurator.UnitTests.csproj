@@ -20,7 +20,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\KafkaCurator.LogHandler.Microsoft\KafkaCurator.LogHandler.Microsoft.csproj" />
+      <ProjectReference Include="..\..\src\KafkaCurator.LogHandler.Microsoft\KafkaCurator.LogHandler.Microsoft.csproj" />
+      <ProjectReference Include="..\..\src\KafkaCurator\KafkaCurator.csproj" />
     </ItemGroup>
 
     <ItemGroup>
