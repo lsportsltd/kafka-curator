@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <LangVersion>latest</LangVersion>
+
+    <Authors>Nizan Rosh</Authors>
+    <Company></Company>
+    <Copyright>Copyright © 2022-present Nizan Rosh</Copyright>
+    <PackageProjectUrl>https://github.com/nizanrosh/kafka-curator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nizanrosh/kafka-curator</RepositoryUrl>
+    <Description>A dotnet open source to manage the creation, alteration and deletion of Kafka topics.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+</Project>
