@@ -10,6 +10,7 @@ namespace KafkaCurator.Configuration
         IClusterConfigurationBuilder WithBrokers(string brokers);
         IClusterConfigurationBuilder WithName(string name);
         IClusterConfigurationBuilder WithSecurityInformation(Action<SecurityInformation> handler);
+        IClusterConfigurationBuilder WithCustomTopicsFileSerializer(ITopicsFileSerializer serializer);
         IClusterConfigurationBuilder ConfigureChangesManager(Action<IChangesManagerConfigurationBuilder> changesManager);
         IClusterConfigurationBuilder AddTopic(Action<ITopicConfigurationBuilder> topic);
         IClusterConfigurationBuilder AddTopicsJsonFile(string path);
