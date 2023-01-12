@@ -1,7 +1,7 @@
-﻿using KafkaCurator.Extensions;
-using KafkaCurator.Extensions.Microsoft.DependencyInjection;
+﻿using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 using KafkaCurator.LogHandler.Console;
 using LSports.Extensions.Kafka.Curator;
+using LSports.Kafka.Curator;
 using LSports.Kafka.Curator.Constants;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +25,7 @@ services.AddKafkaCurator(kafka => kafka
         .ConfigureChangesManager(changes => changes
             .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExclude).Get<string[]>()))
         .AddTopicsJsonFile($"topicsettings.{env}.json")
+        .WithCustomTopicsFileSerializer(new CustomTopicsFileSerializer())
     ));
 
 var provider = services.BuildServiceProvider();
