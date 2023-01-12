@@ -18,6 +18,7 @@ namespace KafkaCurator.Configuration
         
         private string _brokers;
         private string _name;
+        private ITopicsFileSerializer _topicsFileSerializer = new DefaultTopicsFileSerializer();
         private Func<SecurityInformation> _securityInformationHandler;
         private Action<IChangesManagerConfigurationBuilder> _changesManagerAction;
 
@@ -57,6 +58,12 @@ namespace KafkaCurator.Configuration
             return this;
         }
 
+        public IClusterConfigurationBuilder WithCustomTopicsFileSerializer(ITopicsFileSerializer serializer)
+        {
+            _topicsFileSerializer = serializer;
+            return this;
+        }
+
         public IClusterConfigurationBuilder ConfigureChangesManager(Action<IChangesManagerConfigurationBuilder> changesManager)
         {
             _changesManagerAction = changesManager;
@@ -90,7 +97,7 @@ namespace KafkaCurator.Configuration
             
             foreach (var topicsFile in _topicFiles)
             {
-                var result = JsonSerializer.Deserialize<TopicsFile>(File.ReadAllBytes(topicsFile));
+                var result = _topicsFileSerializer.Deserialize(File.ReadAllBytes(topicsFile));
                 clusterConfiguration.AddTopics(result.Topics);
             }
             
