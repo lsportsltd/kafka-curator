@@ -174,7 +174,7 @@
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
       "CleanupPolicy": "compact",
-      "MaxMessageBytes": 10485880
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "OCR.ScoreboardFrame",
