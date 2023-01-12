@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 
-namespace KafkaCurator.Extensions
+namespace LSports.Extensions.Kafka.Curator
 {
     public static class HostBuilderExtensions
     {

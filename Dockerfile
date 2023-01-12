@@ -1,21 +1,21 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/runtime:5.0 AS base
+FROM mcr.microsoft.com/dotnet/runtime:6.0 AS base
 WORKDIR /app
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 # WORKDIR /src
 COPY . .
 # COPY ["src/Logic/KafkaCurator/KafkaCurator.csproj", "Logic/KafkaCurator/"]
 # COPY ["src/Logic/KafkaCurator.Extensions/KafkaCurator.Extensions.csproj", "Logic/KafkaCurator.Extensions/"]
 # COPY ["src/Logic/KafkaCurator.Core/KafkaCurator.Core.csproj", "Logic/KafkaCurator.Core/"]
-RUN dotnet restore "src/Logic/KafkaCurator/KafkaCurator.csproj"
+RUN dotnet restore "src/Logic/KafkaCurator/LSports.Kafka.Curator.csproj"
 # COPY . .
-WORKDIR "/src/Logic/KafkaCurator"
-RUN dotnet build "KafkaCurator.csproj" -c Release -o /app/build
+WORKDIR "/src/Logic/LSports.Kafka.Curator"
+RUN dotnet build "LSports.Kafka.Curator.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "KafkaCurator.csproj" -c Release -o /app/publish
+RUN dotnet publish "LSports.Kafka.Curator.csproj" -c Release -o /app/publish
 
 FROM base AS final
 ARG AWS_ACCESS_KEY_ID
@@ -29,4 +29,4 @@ ENV AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-RUN ["dotnet", "KafkaCurator.dll"]
+RUN ["dotnet", "LSports.Kafka.Curator.dll"]
