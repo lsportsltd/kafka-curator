@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 
-namespace KafkaCurator.Extensions
+namespace LSports.Extensions.Kafka.Curator
 {
     public static class ConfigurationBuilderExtensions
     {

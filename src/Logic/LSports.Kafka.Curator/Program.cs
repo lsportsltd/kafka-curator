@@ -1,6 +1,7 @@
 ﻿using KafkaCurator.Extensions;
 using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 using KafkaCurator.LogHandler.Console;
+using LSports.Extensions.Kafka.Curator;
 using LSports.Kafka.Curator.Constants;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
