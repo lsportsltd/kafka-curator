@@ -8,9 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Amazon.Extensions.Configuration.SystemsManager" Version="4.0.0" />
       <PackageReference Include="KafkaCurator.Extensions.Microsoft.DependencyInjection" Version="1.1.1" />
       <PackageReference Include="KafkaCurator.LogHandler.Console" Version="1.1.1" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
@@ -29,10 +31,6 @@
       <None Update="topicsettings.qa.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\LSports.Extensions.Kafka.Curator\LSports.Extensions.Kafka.Curator.csproj" />
     </ItemGroup>
 
 </Project>
