@@ -8,7 +8,7 @@ namespace KafkaCurator.LogHandler.Console
     public static class ExtensionMethods
     {
         /// <summary>
-        /// Configure KafkaFlow to use the Console to log messages
+        /// Configure KafkaCurator to use the Console to log messages
         /// </summary>
         /// <param name="builder">The Kafka configuration builder</param>
         /// <returns></returns>
