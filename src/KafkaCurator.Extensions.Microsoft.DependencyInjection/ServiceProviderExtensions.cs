@@ -11,10 +11,10 @@ namespace KafkaCurator.Extensions.Microsoft.DependencyInjection
     public static class ServiceProviderExtensions
     {
         /// <summary>
-        /// Creates a KafkaFlow bus
+        /// Creates a KafkaCurator bus
         /// </summary>
         /// <param name="provider">Instance of <see cref="IServiceProvider"/></param>
-        /// <returns><see cref="IKafkaCurator"/>A KafkaFlow bus</returns>
+        /// <returns><see cref="IKafkaCurator"/>A KafkaCurator bus</returns>
         public static IKafkaCurator CreateCurator(this IServiceProvider provider)
         {
             var resolver = provider.GetRequiredService<IDependencyResolver>();

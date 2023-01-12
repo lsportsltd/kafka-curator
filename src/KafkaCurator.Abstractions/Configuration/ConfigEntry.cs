@@ -28,7 +28,7 @@ namespace KafkaCurator.Abstractions.Configuration
         public static ConfigEntry SegmentMs = new ConfigEntry(nameof(SegmentMs),KafkaConfigs.SegmentMs);
         public static ConfigEntry MessageTimestampDifferenceMaxMs = new ConfigEntry(nameof(MessageTimestampDifferenceMaxMs),KafkaConfigs.MessageTimestampDifferenceMaxMs);
         public static ConfigEntry SegmentIndexBytes = new ConfigEntry(nameof(SegmentIndexBytes),KafkaConfigs.SegmentIndexBytes);
-        public static ConfigEntry FileDeleteDelayMs = new ConfigEntry(nameof(FileDeleteDelayMs),KafkaConfigs.MaxCompactionLagMs);
+        public static ConfigEntry FileDeleteDelayMs = new ConfigEntry(nameof(FileDeleteDelayMs),KafkaConfigs.FileDeleteDelayMs);
         
         public string EntryName { get; }
         
