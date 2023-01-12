@@ -1,8 +1,7 @@
 ﻿using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 using KafkaCurator.LogHandler.Console;
-using LSports.Extensions.Kafka.Curator;
-using LSports.Kafka.Curator;
 using LSports.Kafka.Curator.Constants;
+using LSports.Kafka.Curator.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SecurityProtocol = KafkaCurator.Abstractions.Configuration.SecurityProtocol;
