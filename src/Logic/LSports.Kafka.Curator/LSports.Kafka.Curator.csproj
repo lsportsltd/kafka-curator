@@ -9,7 +9,7 @@
 
     <ItemGroup>
       <PackageReference Include="KafkaCurator.Extensions.Microsoft.DependencyInjection" Version="1.1.1" />
-      <PackageReference Include="KafkaCurator.LogHandler.Console" Version="1.1.0" />
+      <PackageReference Include="KafkaCurator.LogHandler.Console" Version="1.1.1" />
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
       <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
