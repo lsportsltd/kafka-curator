@@ -25,7 +25,6 @@ services.AddKafkaCurator(kafka => kafka
         .ConfigureChangesManager(changes => changes
             .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExclude).Get<string[]>()))
         .AddTopicsJsonFile($"topicsettings.{env}.json")
-        .WithCustomTopicsFileSerializer(new CustomTopicsFileSerializer())
     ));
 
 var provider = services.BuildServiceProvider();
