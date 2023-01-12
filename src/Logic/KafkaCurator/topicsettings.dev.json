@@ -173,7 +173,8 @@
       "Name": "OCR.FullFrame",
       "ReplicationFactor": 3,
       "NumOfPartitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "OCR.ScoreboardFrame",
