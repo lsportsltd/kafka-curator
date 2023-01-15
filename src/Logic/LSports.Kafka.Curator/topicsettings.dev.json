@@ -263,13 +263,13 @@
     {
       "Name": "STM.InPlayMarket.Suspension",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Suspension",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
