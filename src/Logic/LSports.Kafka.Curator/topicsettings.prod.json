@@ -178,13 +178,13 @@
     {
       "Name": "STM.InPlayMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
@@ -202,13 +202,13 @@
     {
       "Name": "STM.InPlayMarket.Suspension",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Suspension",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
