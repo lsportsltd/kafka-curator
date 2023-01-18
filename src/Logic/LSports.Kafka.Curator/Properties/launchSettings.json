@@ -1,13 +1,11 @@
-{
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
-    "KafkaCurator": {
+    "LSports.Kafka.Curator": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "qa"
       }
-    },
-    "Docker": {
-      "commandName": "Docker"
     }
   }
 }

@@ -2,7 +2,7 @@
 using Amazon.SimpleSystemsManagement.Model;
 using Microsoft.Extensions.Configuration;
 
-namespace KafkaCurator.Extensions
+namespace LSports.Kafka.Curator.Extensions
 {
     public static class SsmExtensions
     {

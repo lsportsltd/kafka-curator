@@ -1,4 +1,4 @@
-﻿namespace KafkaCurator.Core.Constants
+﻿namespace LSports.Kafka.Curator.Constants
 {
     public static class Endpoints
     {
