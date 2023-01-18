@@ -299,7 +299,7 @@
     {
       "Name": "DI.ProviderFixture.Raw",
       "ReplicationFactor": 3,
-      "NumOfPartitions": 3,
+      "Partitions": 3,
       "CleanupPolicy": "delete"
     }
   ]
