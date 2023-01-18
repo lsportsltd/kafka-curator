@@ -118,7 +118,7 @@
     {
       "Name": "STM.Subscription.Handled",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
