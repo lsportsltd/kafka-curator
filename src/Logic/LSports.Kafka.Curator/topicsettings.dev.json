@@ -183,6 +183,18 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "OCR.ScoreboardFrame.Tennis",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "OCR.ScoreboardFrame.TableTennis",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "OCR.ResultJson",
       "ReplicationFactor": 3,
       "Partitions": 3,
