@@ -77,7 +77,7 @@ Below is a list of the configurations:\
 `SegmentMs`\
 `MessageTimestampDifferenceMaxMs`\
 `SegmentIndexBytes`\
-`FileDeleteDelayMs`\
+`FileDeleteDelayMs`
 
 Each of the configuration entries shown above have its own method to be specified inline:
 ```cs
