@@ -126,5 +126,5 @@ services.AddKafkaCurator(kafka => kafka
     ));
 ```
 
-# Licnese
+# License
 kafka-curator is a free and open source project, released under the permissible [MIT License](https://github.com/nizanrosh/kafka-curator/blob/main/LICENSE)
