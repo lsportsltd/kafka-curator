@@ -1,3 +1,4 @@
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nizanrosh/kafka-curator/blob/main/LICENSE) [![nuget version](https://img.shields.io/nuget/v/KafkaCurator.svg?style=flat)](https://www.nuget.org/packages/KafkaCurator) [![Build](https://github.com/nizanrosh/kafka-curator/actions/workflows/build.yml/badge.svg)](https://github.com/nizanrosh/kafka-curator/actions/workflows/build.yml)
 # kafka-curator
 
 # Introduction
