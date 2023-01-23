@@ -174,37 +174,43 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact",
-      "MaxMessageBytes": "10485880"
+      "MaxMessageBytes": "10485880",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.ScoreboardFrame",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.ScoreboardFrame.Tennis",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.ScoreboardFrame.TableTennis",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.ResultJson",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "compact",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.Invalid",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "DATA.Markets.PreMatch",
