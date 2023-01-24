@@ -222,6 +222,18 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "DI.Resulting.Prematch.Coverage",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Resulting.Inplay.Coverage",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
