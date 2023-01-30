@@ -29,13 +29,7 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.Livescore.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 50,
-      "CleanupPolicy": "delete"
-    },
+    },    
     {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
