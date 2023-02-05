@@ -29,7 +29,7 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete"
-    },    
+    },
     {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
@@ -100,12 +100,6 @@
       "Name": "STM.MarketSettings.Changed",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "BlackWidow.Items",
-      "ReplicationFactor": 3,
-      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
