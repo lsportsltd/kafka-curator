@@ -146,7 +146,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "Data.Providers.State",
+      "Name": "Data.Providers.Health",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
