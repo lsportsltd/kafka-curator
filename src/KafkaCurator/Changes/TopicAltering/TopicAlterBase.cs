@@ -15,16 +15,25 @@ namespace KafkaCurator.Changes.TopicAltering
         public bool ShouldAlter { get; }
         public ConfigEntry ConfigEntry { get; }
         public string NewValue { get; }
+        public string OldValue { get; }
 
         public AlterHandlerResult()
         {
             ShouldAlter = false;
         }
 
-        public AlterHandlerResult(bool result, ConfigEntry entry, string newValue)
+        public AlterHandlerResult(ConfigEntry configEntry, string oldValue)
+        {
+            ShouldAlter = false;
+            ConfigEntry = configEntry;
+            OldValue = oldValue;
+        }
+
+        public AlterHandlerResult(bool result, ConfigEntry entry, string oldValue, string newValue)
         {
             ShouldAlter = result;
             ConfigEntry = entry;
+            OldValue = oldValue;
             NewValue = newValue;
         }
     }

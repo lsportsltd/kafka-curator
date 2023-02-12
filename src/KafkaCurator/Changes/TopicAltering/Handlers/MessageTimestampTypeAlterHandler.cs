@@ -6,12 +6,16 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
     public class MessageTimestampTypeAlterHandler : TopicAlterBase
     {
         public override ConfigEntry ConfigEntry => ConfigEntry.MessageTimestampType;
+
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.MessageTimestampType == null || topicConfig.MessageTimestampType == topicState.MessageTimestampType)
-                return new AlterHandlerResult();
+            if (topicConfig.MessageTimestampType == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.MessageTimestampType);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.MessageTimestampType);
+            if (topicState.MessageTimestampType == topicConfig.MessageTimestampType)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.MessageTimestampType, topicConfig.MessageTimestampType);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.MessageTimestampType, topicConfig.MessageTimestampType);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

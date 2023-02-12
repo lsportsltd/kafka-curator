@@ -6,12 +6,15 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
     public class MaxMessageBytesAlterHandler : TopicAlterBase
     {
         public override ConfigEntry ConfigEntry => ConfigEntry.MaxMessageBytes;
+
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.MaxMessageBytes == null || topicConfig.MaxMessageBytes == topicState.MaxMessageBytes)
-                return new AlterHandlerResult();
+            if (topicConfig.MaxMessageBytes == null) return new AlterHandlerResult(ConfigEntry, topicConfig.MaxMessageBytes);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.MaxMessageBytes);
+            if (topicState.MaxMessageBytes == topicConfig.MaxMessageBytes)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.MaxMessageBytes, topicConfig.MaxMessageBytes);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.MaxMessageBytes, topicConfig.MaxMessageBytes);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

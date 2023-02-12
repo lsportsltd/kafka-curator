@@ -8,10 +8,12 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
         public override ConfigEntry ConfigEntry => ConfigEntry.CompressionType;
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.CompressionType == null || topicConfig.CompressionType == topicState.CompressionType)
-                return new AlterHandlerResult();
+            if (topicConfig.CompressionType == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.CompressionType);
+            
+            if (topicState.CompressionType == topicConfig.CompressionType) return new AlterHandlerResult(false, ConfigEntry, topicState.CompressionType, topicConfig.CompressionType);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.CompressionType);
+            return new AlterHandlerResult(true, ConfigEntry, topicState.CompressionType, topicConfig.CompressionType);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

@@ -7,6 +7,7 @@ namespace KafkaCurator.Changes
     public interface IChangesManager
     {
         public string Name { get; }
+        Task PreviewChanges(IReadOnlyList<ITopicConfiguration> topics);
         Task HandleChanges(IReadOnlyList<ITopicConfiguration> topics);
     }
 }

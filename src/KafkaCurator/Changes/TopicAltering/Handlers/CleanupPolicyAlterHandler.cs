@@ -9,9 +9,11 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
         
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.CleanupPolicy == null || topicConfig.CleanupPolicy == topicState.CleanupPolicy) return new AlterHandlerResult();
+            if (topicConfig.CleanupPolicy == null) return new AlterHandlerResult(ConfigEntry, topicConfig.CleanupPolicy);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.CleanupPolicy);
+            if (topicState.CleanupPolicy == topicConfig.CleanupPolicy) return new AlterHandlerResult(false, ConfigEntry, topicState.CleanupPolicy, topicConfig.CleanupPolicy);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.CleanupPolicy, topicConfig.CleanupPolicy);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

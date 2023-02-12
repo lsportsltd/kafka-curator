@@ -17,21 +17,48 @@ namespace KafkaCurator.LogHandler.Console
                 });
 
             Print(
-                $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)} | Exception: {serializedException}",
+                $"KafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)} | Exception: {serializedException}",
+                ConsoleColor.Red);
+        }
+
+        public void Error(string message, Exception ex)
+        {
+            var serializedException = JsonSerializer.Serialize(
+                new
+                {
+                    Type = ex.GetType().FullName,
+                    ex.Message,
+                    ex.StackTrace,
+                });
+
+            Print(
+                $"KafkaCurator: {message} | Exception: {serializedException}",
                 ConsoleColor.Red);
         }
 
         public void Warning(string message, object data) => Print(
-            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"KafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
+            ConsoleColor.Yellow);
+
+        public void Warning(string message) => Print(
+            $"KafkaCurator: {message}",
             ConsoleColor.Yellow);
 
         public void Info(string message, object data) => Print(
-            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"KafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
             ConsoleColor.Green);
+        
+        public void Info(string message) => Print(
+            $"KafkaCurator: {message}", ConsoleColor.Green);
 
         public void Verbose(string message, object data) => Print(
-            $"\nKafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
+            $"KafkaCurator: {message} | Data: {JsonSerializer.Serialize(data)}",
             ConsoleColor.Blue);
+
+        public void Verbose(string message) => Print(
+            $"KafkaCurator: {message}",
+            ConsoleColor.Blue);
+
 
         private static void Print(string message, ConsoleColor color)
         {
