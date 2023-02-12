@@ -57,7 +57,7 @@ namespace KafkaCurator.Changes
             var numOfTopicsToDelete = _deleteTopicsHandler.PreviewDeleteTopics(topicsToDelete);
             _logHandler.Info("Done.\n");
 
-            SummarizePreview(numOfTopicsToUpdate, numOfTopicsToCreate, numOfTopicsToDelete, topics.Count);
+            SummarizePreview(numOfTopicsToUpdate, numOfTopicsToCreate, numOfTopicsToDelete, state.Count);
         }
 
         public async Task HandleChanges(IReadOnlyList<ITopicConfiguration> topics)
@@ -89,7 +89,7 @@ namespace KafkaCurator.Changes
             _logHandler.Info("Updating state...\n");
             await _stateManager.SetState(topics);
             
-            SummarizeUpdate(numOfTopicsToUpdate, numOfTopicsToCreate, numOfTopicsToDelete, topics.Count);
+            SummarizeUpdate(numOfTopicsToUpdate, numOfTopicsToCreate, numOfTopicsToDelete, state.Count);
         }
 
         private IStateManager GetStateManager(IDependencyResolver dependencyResolver,
@@ -131,7 +131,7 @@ namespace KafkaCurator.Changes
             if(numToCreate != 0) _logHandler.Info($"  + {numToCreate} to create.");
             if(numToDelete != 0) _logHandler.Info($"  - {numToDelete} to delete.");
             
-            _logHandler.Info($"  {numToUpdate + numToCreate + numToDelete} changes. {totalTopics - numToCreate - numToDelete} unchanged\n");
+            _logHandler.Info($"  {numToUpdate + numToCreate + numToDelete} changes. {totalTopics - numToUpdate - numToCreate - numToDelete} unchanged\n");
         }
         
         private void SummarizeUpdate(int numToUpdate, int numToCreate, int numToDelete, int totalTopics)
@@ -148,7 +148,7 @@ namespace KafkaCurator.Changes
             if(numToCreate != 0) _logHandler.Info($"  + {numToCreate} created.");
             if(numToDelete != 0) _logHandler.Info($"  - {numToDelete} deleted.");
             
-            _logHandler.Info($"  {numToUpdate + numToCreate + numToDelete} changes. {totalTopics - numToCreate - numToDelete} unchanged");
+            _logHandler.Info($"  {numToUpdate + numToCreate + numToDelete} changes. {totalTopics - numToUpdate - numToCreate - numToDelete} unchanged");
         }
     }
 }
