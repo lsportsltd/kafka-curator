@@ -1,4 +1,5 @@
-﻿using KafkaCurator.Extensions.Microsoft.DependencyInjection;
+﻿using KafkaCurator.Configuration;
+using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 using KafkaCurator.LogHandler.Console;
 using LSports.Kafka.Curator.Constants;
 using LSports.Kafka.Curator.Extensions;
@@ -29,4 +30,9 @@ services.AddKafkaCurator(kafka => kafka
 var provider = services.BuildServiceProvider();
 var curator = provider.CreateCurator();
 
-return await curator.ExecuteAsync();
+var runConfig = new RunConfiguration
+{
+    DryRun = args.Contains("--dry-run")
+};
+
+return await curator.RunAsync(runConfig);
