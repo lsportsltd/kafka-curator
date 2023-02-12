@@ -8,10 +8,12 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
         public override ConfigEntry ConfigEntry => ConfigEntry.SegmentBytes;
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.SegmentBytes == null || topicConfig.SegmentBytes == topicState.SegmentBytes)
-                return new AlterHandlerResult();
+            if (topicConfig.SegmentBytes == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.SegmentBytes);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.SegmentBytes);
+            if (topicState.SegmentBytes == topicConfig.SegmentBytes) return new AlterHandlerResult(false, ConfigEntry, topicState.SegmentBytes, topicConfig.SegmentBytes);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.SegmentBytes, topicConfig.SegmentBytes);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

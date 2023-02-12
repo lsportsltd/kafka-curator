@@ -8,10 +8,12 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
         public override ConfigEntry ConfigEntry => ConfigEntry.Preallocate;
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.Preallocate == null || topicConfig.Preallocate == topicState.Preallocate)
-                return new AlterHandlerResult();
+            if (topicConfig.Preallocate == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.Preallocate);
+            
+            if (topicState.Preallocate == topicConfig.Preallocate) return new AlterHandlerResult(false, ConfigEntry, topicState.Preallocate, topicConfig.Preallocate);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.Preallocate);
+            return new AlterHandlerResult(true, ConfigEntry, topicState.Preallocate, topicConfig.Preallocate);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

@@ -8,10 +8,13 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
         public override ConfigEntry ConfigEntry => ConfigEntry.FileDeleteDelayMs;
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.FileDeleteDelayMs == null || topicConfig.FileDeleteDelayMs == topicState.FileDeleteDelayMs)
-                return new AlterHandlerResult();
+            if (topicConfig.FileDeleteDelayMs == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.FileDeleteDelayMs);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.FileDeleteDelayMs);
+            if (topicState.FileDeleteDelayMs == topicConfig.FileDeleteDelayMs)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.FileDeleteDelayMs, topicConfig.FileDeleteDelayMs);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.FileDeleteDelayMs, topicConfig.FileDeleteDelayMs);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

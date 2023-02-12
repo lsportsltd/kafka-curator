@@ -6,12 +6,16 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
     public class MinInSyncReplicasAlterHandler : TopicAlterBase
     {
         public override ConfigEntry ConfigEntry => ConfigEntry.MinInSyncReplicas;
+
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.MinInSyncReplicas == null || topicConfig.MinInSyncReplicas == topicState.MinInSyncReplicas)
-                return new AlterHandlerResult();
+            if (topicConfig.MinInSyncReplicas == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.MinInSyncReplicas);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.MinInSyncReplicas);
+            if (topicState.MinInSyncReplicas == topicConfig.MinInSyncReplicas)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.MinInSyncReplicas, topicConfig.MinInSyncReplicas);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.MinInSyncReplicas, topicConfig.MinInSyncReplicas);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

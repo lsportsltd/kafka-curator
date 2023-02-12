@@ -6,12 +6,16 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
     public class FollowerReplicationThrottledReplicasAlterHandler : TopicAlterBase
     {
         public override ConfigEntry ConfigEntry => ConfigEntry.FollowerReplicationThrottledReplicas;
+
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.FollowerReplicationThrottledReplicas == null || topicConfig.FollowerReplicationThrottledReplicas == topicState.FollowerReplicationThrottledReplicas)
-                return new AlterHandlerResult();
+            if (topicConfig.FollowerReplicationThrottledReplicas == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.FollowerReplicationThrottledReplicas);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.FollowerReplicationThrottledReplicas);
+            if (topicState.FollowerReplicationThrottledReplicas == topicConfig.FollowerReplicationThrottledReplicas)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.FollowerReplicationThrottledReplicas, topicConfig.FollowerReplicationThrottledReplicas);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.FollowerReplicationThrottledReplicas, topicConfig.FollowerReplicationThrottledReplicas);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

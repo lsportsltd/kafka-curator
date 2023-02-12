@@ -6,12 +6,16 @@ namespace KafkaCurator.Changes.TopicAltering.Handlers
     public class UncleanLeaderElectionEnableAlterHandler : TopicAlterBase
     {
         public override ConfigEntry ConfigEntry => ConfigEntry.UncleanLeaderElectionEnable;
+
         public override AlterHandlerResult ShouldAlter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)
         {
-            if (topicConfig.UncleanLeaderElectionEnable == null || topicConfig.UncleanLeaderElectionEnable == topicState.UncleanLeaderElectionEnable)
-                return new AlterHandlerResult();
+            if (topicConfig.UncleanLeaderElectionEnable == null)
+                return new AlterHandlerResult(ConfigEntry, topicConfig.UncleanLeaderElectionEnable);
 
-            return new AlterHandlerResult(true, ConfigEntry, topicConfig.UncleanLeaderElectionEnable);
+            if (topicState.UncleanLeaderElectionEnable == topicConfig.UncleanLeaderElectionEnable)
+                return new AlterHandlerResult(false, ConfigEntry, topicState.UncleanLeaderElectionEnable, topicConfig.UncleanLeaderElectionEnable);
+
+            return new AlterHandlerResult(true, ConfigEntry, topicState.UncleanLeaderElectionEnable, topicConfig.UncleanLeaderElectionEnable);
         }
 
         public override void Alter(ITopicConfiguration topicConfig, ITopicConfiguration topicState)

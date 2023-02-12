@@ -1,4 +1,5 @@
 ﻿using Confluent.Kafka;
+using KafkaCurator.Configuration;
 using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 using KafkaCurator.LogHandler.Console;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,4 +24,4 @@ var provider = services.BuildServiceProvider();
 
 var curator = provider.CreateCurator();
 
-return await curator.ExecuteAsync();
+return await curator.RunAsync(new RunConfiguration());

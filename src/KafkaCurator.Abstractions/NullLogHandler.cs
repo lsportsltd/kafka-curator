@@ -13,8 +13,18 @@ namespace KafkaCurator.Abstractions
             // Do nothing
         }
 
+        public void Error(string message, Exception ex)
+        {
+            // Do nothing
+        }
+
         /// <inheritdoc />
         public void Warning(string message, object data)
+        {
+            // Do nothing
+        }
+
+        public void Warning(string message)
         {
             // Do nothing
         }
@@ -25,8 +35,18 @@ namespace KafkaCurator.Abstractions
             // Do nothing
         }
 
+        public void Info(string message)
+        {
+            // Do nothing
+        }
+
         /// <inheritdoc />
         public void Verbose(string message, object data)
+        {
+            // Do nothing
+        }
+
+        public void Verbose(string message)
         {
             // Do nothing
         }
