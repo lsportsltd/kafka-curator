@@ -3,8 +3,9 @@
   "profiles": {
     "LSports.Kafka.Curator": {
       "commandName": "Project",
+      "commandLineArgs": "--dry-run",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "qa"
+        "ASPNETCORE_ENVIRONMENT": "dev"
       }
     }
   }
