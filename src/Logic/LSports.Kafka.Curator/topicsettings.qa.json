@@ -221,25 +221,29 @@
       "Name": "DI.PreMatch.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.InPlay.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
       "Partitions": 10,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.ProviderFixture.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.Resulting.Prematch.Coverage",
