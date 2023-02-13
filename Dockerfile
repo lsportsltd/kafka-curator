@@ -9,7 +9,7 @@ COPY . .
 # COPY ["src/Logic/KafkaCurator/KafkaCurator.csproj", "Logic/KafkaCurator/"]
 # COPY ["src/Logic/KafkaCurator.Extensions/KafkaCurator.Extensions.csproj", "Logic/KafkaCurator.Extensions/"]
 # COPY ["src/Logic/KafkaCurator.Core/KafkaCurator.Core.csproj", "Logic/KafkaCurator.Core/"]
-RUN dotnet restore "src/Logic/LSports.Kafka.Curator/LSports.Kafka.Curator.csproj"
+RUN dotnet restore "src/Logic/LSports.Kafka.Curator/LSports.Kafka.Curator.csproj" --configfile "nuget/nuget.config"
 # COPY . .
 WORKDIR "/src/Logic/LSports.Kafka.Curator"
 RUN dotnet build "LSports.Kafka.Curator.csproj" -c Release -o /app/build
