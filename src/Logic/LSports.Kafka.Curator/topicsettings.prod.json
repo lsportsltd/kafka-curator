@@ -166,13 +166,13 @@
     {
       "Name": "STM.InPlayMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
