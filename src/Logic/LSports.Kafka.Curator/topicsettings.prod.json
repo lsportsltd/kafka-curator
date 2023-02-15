@@ -51,7 +51,7 @@
     {
       "Name": "DI.ProviderFixture.Valid",
       "ReplicationFactor": 3,
-      "Partitions": 15,
+      "Partitions": 30,
       "CleanupPolicy": "delete"
     },
     {
@@ -238,6 +238,12 @@
       "Partitions": 30,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.ProviderFixture.Enriched",
+      "ReplicationFactor": 3,
+      "Partitions": 30,
+      "CleanupPolicy": "delete"
     }
   ]
 }
