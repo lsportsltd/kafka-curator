@@ -130,7 +130,7 @@
     {
       "Name": "STM.MarketSettings.Changed",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
