@@ -69,13 +69,13 @@
     {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
@@ -148,13 +148,13 @@
     {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
@@ -178,13 +178,13 @@
     {
       "Name": "STM.InPlayMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 30,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
