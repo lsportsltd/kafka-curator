@@ -49,6 +49,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "Data.Providers.Health",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "DI.ProviderFixture.Valid",
       "ReplicationFactor": 3,
       "Partitions": 30,
