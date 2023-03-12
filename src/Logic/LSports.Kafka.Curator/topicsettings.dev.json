@@ -289,21 +289,21 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "52429400"
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.InPlay.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "52429400"
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "52429400"
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.ProviderFixture.Raw",
