@@ -195,7 +195,7 @@
       "Name": "OCR.ScoreboardFrame.TableTennis",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact",
+      "CleanupPolicy": "delete",
       "RetentionBytes": "5000000000"
     },
     {
