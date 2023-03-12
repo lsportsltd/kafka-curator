@@ -48,14 +48,14 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "MaxMessageBytes": "52429400"
     },
     {
       "Name": "DATA.InPlayMarket.Raw",
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "MaxMessageBytes": "52429400"
     },
     {
       "Name": "DI.InPlayMarket.Outliered",
