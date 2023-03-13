@@ -196,7 +196,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "RetentionBytes": "5000000000"
+      "RetentionBytes": "2000000000"
     },
     {
       "Name": "OCR.ResultJson",
