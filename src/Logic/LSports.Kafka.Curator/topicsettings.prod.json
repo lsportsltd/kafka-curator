@@ -234,7 +234,7 @@
     {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "52429400"
     },
