@@ -194,6 +194,14 @@
       "SegmentMs": "86400000"
     },
     {
+      "Name": "OCR.ScoreboardFrame.Volleyball",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "2000000000",
+      "SegmentMs": "86400000"
+    },
+    {
       "Name": "OCR.ScoreboardFrame.TableTennis",
       "ReplicationFactor": 3,
       "Partitions": 3,
