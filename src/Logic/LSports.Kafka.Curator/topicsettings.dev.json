@@ -178,6 +178,14 @@
       "RetentionBytes": "5000000000"
     },
     {
+      "Name": "OCR.FullFrame.Volleyball",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485880",
+      "RetentionBytes": "5000000000"
+    },
+    {
       "Name": "OCR.ScoreboardFrame",
       "ReplicationFactor": 3,
       "Partitions": 3,
