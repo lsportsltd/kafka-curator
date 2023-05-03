@@ -79,7 +79,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Pre.Live.s.InPlayMarket.Outliered",
+      "Name": "DI.Pre.Live.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 50,
       "CleanupPolicy": "delete"
@@ -91,7 +91,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Pre.Live..PreMatchMarket.Outliered",
+      "Name": "DI.Pre.Live.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 50,
       "CleanupPolicy": "delete"

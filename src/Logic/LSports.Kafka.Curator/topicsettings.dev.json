@@ -104,7 +104,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Pre.Live..PreMatchMarket.Outliered",
+      "Name": "DI.Pre.Live.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete"
