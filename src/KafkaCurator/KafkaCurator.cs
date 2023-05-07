@@ -63,7 +63,7 @@ namespace KafkaCurator
                 return 1;
             }
 
-            if (runConfiguration.DryRun) return 1;
+            if (runConfiguration.DryRun) return 0;
             
             try
             {
