@@ -46,14 +46,14 @@
     {
       "Name": "DATA.PreMatchMarket.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "52429400"
     },
     {
       "Name": "DATA.InPlayMarket.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "52429400"
     },
