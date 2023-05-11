@@ -2,10 +2,10 @@
 {
     public static class Endpoints
     {
-        public static string KafkaHermesBootstrapServers =
+        public static readonly string KafkaHermesBootstrapServers =
             "MESSAGE-BROKER:KAFKA:HERMES:BOOTSTRAP-BROKER-TLS";
 
-        public static string KafkaCobWebBootstrapServers =
+        public static readonly string KafkaCobWebBootstrapServers =
             "MESSAGE-BROKER:KAFKA:COBWEB:BOOTSTRAP-BROKER-TLS";
     }
 }
