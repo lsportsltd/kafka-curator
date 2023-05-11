@@ -12,38 +12,26 @@ var services = new ServiceCollection();
 
 var config = new ConfigurationBuilder()
     .AddEnvironmentVariables()
-    .AddJsonFile("appsettings.hermes.json", false)
-    .AddJsonFile("appsettings.cobweb.json", false)
+    .AddJsonFile("appsettings.json", false)
     .AddAwsSsm()
     .Build();
 
-#region Hermes Cluster
-
 services.AddKafkaCurator(kafka => kafka
     .UseConsoleLog()
+
     .AddCluster(cluster => cluster
         .WithBrokers(config[Endpoints.KafkaHermesBootstrapServers])
         .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExclude).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.hermes.{env}.json")
-    ));
+            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeHermes).Get<string[]>()))
+        .AddTopicsJsonFile($"topicsettings.hermes.{env}.json"))
 
-#endregion
-
-#region CobWeb Cluster
-
-services.AddKafkaCurator(kafka => kafka
-    .UseConsoleLog()
     .AddCluster(cluster => cluster
         .WithBrokers(config[Endpoints.KafkaCobWebBootstrapServers])
         .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExclude).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json")
-    ));
-
-#endregion
+            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeCobWeb).Get<string[]>()))
+        .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json")));
 
 var runConfig = new RunConfiguration
 {
