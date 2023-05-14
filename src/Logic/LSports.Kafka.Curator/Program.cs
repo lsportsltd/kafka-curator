@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 
 var env = Environment.GetEnvironmentVariable(EnvironmentVariableName.HostEnvironment);
-var services = new ServiceCollection();
 
 var config = new ConfigurationBuilder()
     .AddEnvironmentVariables()
@@ -14,14 +13,15 @@ var config = new ConfigurationBuilder()
     .AddAwsSsm()
     .Build();
 
-CuratorClusterCreator.CreateBasedOnEvn(env, services, config);
+var services = new ServiceCollection();
+services.AddKafkaCuratorBasedOnEnv(env,config);
+
+var provider = services.BuildServiceProvider();
+var curator = provider.CreateCurator();
 
 var runConfig = new RunConfiguration
 {
     DryRun = args.Contains("--dry-run")
 };
-
-var provider = services.BuildServiceProvider();
-var curator = provider.CreateCurator();
 
 return await curator.RunAsync(runConfig);
