@@ -22,13 +22,13 @@
       <None Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.dev.json">
+      <None Update="Clusters\Hermes\topicsettings.hermes.dev.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.prod.json">
+      <None Update="Clusters\Hermes\topicsettings.hermes.prod.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.qa.json">
+      <None Update="Clusters\Hermes\topicsettings.hermes.qa.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

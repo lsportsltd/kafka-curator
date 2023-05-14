@@ -2,6 +2,8 @@
 {
     public static class TopicPattern
     {
-        public const string ToExclude = "TopicPrefixesToExclude";
+        public static readonly string ToExcludeHermes = "HermesTopicPrefixesToExclude";
+
+        public static readonly string ToExcludeCobWeb = "CobwebTopicPrefixesToExclude";
     }
 }
