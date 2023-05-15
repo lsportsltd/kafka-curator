@@ -22,14 +22,23 @@
       <None Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.dev.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <None Update="topicsettings.cobweb.dev.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.prod.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <None Update="topicsettings.cobweb.prod.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="topicsettings.qa.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <None Update="topicsettings.cobweb.qa.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="topicsettings.hermes.dev.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="topicsettings.hermes.prod.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="topicsettings.hermes.qa.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 
