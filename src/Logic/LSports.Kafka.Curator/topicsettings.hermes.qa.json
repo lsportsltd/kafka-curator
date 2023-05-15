@@ -22,7 +22,7 @@
     {
       "Name": "STM.Fixture.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
