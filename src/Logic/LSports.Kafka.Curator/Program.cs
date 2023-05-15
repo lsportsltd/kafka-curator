@@ -1,11 +1,9 @@
 ﻿using KafkaCurator.Configuration;
-using KafkaCurator.Extensions.Microsoft.DependencyInjection;
-using KafkaCurator.LogHandler.Console;
 using LSports.Kafka.Curator.Constants;
 using LSports.Kafka.Curator.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SecurityProtocol = KafkaCurator.Abstractions.Configuration.SecurityProtocol;
+using KafkaCurator.Extensions.Microsoft.DependencyInjection;
 
 var env = Environment.GetEnvironmentVariable(EnvironmentVariableName.HostEnvironment);
 
@@ -16,16 +14,7 @@ var config = new ConfigurationBuilder()
     .Build();
 
 var services = new ServiceCollection();
-
-services.AddKafkaCurator(kafka => kafka
-    .UseConsoleLog()
-    .AddCluster(cluster => cluster
-        .WithBrokers(config[Endpoints.KafkaBootstrapServers])
-        .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
-        .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExclude).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.{env}.json")
-    ));
+services.AddKafkaCuratorBasedOnEnv(env,config);
 
 var provider = services.BuildServiceProvider();
 var curator = provider.CreateCurator();
