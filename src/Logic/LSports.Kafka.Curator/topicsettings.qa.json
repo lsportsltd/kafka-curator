@@ -318,6 +318,12 @@
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.OutrightLivescore",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
