@@ -20,14 +20,14 @@ var services = new ServiceCollection();
 services.AddKafkaCurator(kafka => kafka
     .UseConsoleLog()
 
-    .AddCluster(cluster => cluster
+    .AddCluster(cluster => cluster.WithName("Hermes")
         .WithBrokers(config[Endpoints.KafkaHermesBootstrapServers])
         .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changes => changes
             .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeHermes).Get<string[]>()))
         .AddTopicsJsonFile($"topicsettings.hermes.{env}.json"))
 
-    .AddCluster(cluster => cluster
+    .AddCluster(cluster => cluster.WithName("CobWeb")
         .WithBrokers(config[Endpoints.KafkaCobWebBootstrapServers])
         .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changes => changes
