@@ -9,7 +9,7 @@
     {
       "Name": "STM.Fixture.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
