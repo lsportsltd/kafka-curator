@@ -119,7 +119,8 @@
       "Name": "DI.Livescore",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "STM.Livescore.Refined",
