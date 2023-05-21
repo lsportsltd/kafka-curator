@@ -27,7 +27,7 @@
     {
       "Name": "DI.Livescore",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "50000000"
     },
