@@ -30,7 +30,7 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "MaxMessageBytes": "104858800"
     },
     {
       "Name": "STM.Livescore.Refined",
