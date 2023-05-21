@@ -34,13 +34,13 @@
     {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
