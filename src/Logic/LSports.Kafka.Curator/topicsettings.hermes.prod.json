@@ -232,7 +232,7 @@
     {
       "Name": "STM.Fixture.Distributed",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
