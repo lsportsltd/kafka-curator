@@ -331,6 +331,12 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.FixtureMapped",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
