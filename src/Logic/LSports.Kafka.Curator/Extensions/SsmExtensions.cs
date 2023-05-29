@@ -8,14 +8,23 @@ namespace LSports.Kafka.Curator.Extensions
     {
         public static IConfigurationBuilder AddAwsSsm(this IConfigurationBuilder configBuilder)
         {
-            return configBuilder.AddSystemsManager(source =>
+            return configBuilder
+                .AddSystemsManager(source =>
             {
                 var config = configBuilder.Build();
-                var path = config["KafkaSsmPath"];
+                var path = config["HermesSsmPath"];
 
                 source.Path = path;
                 source.ParameterProcessor = new KafkaCuratorParameterProcessor();
-            });
+            })
+                .AddSystemsManager(source =>
+                {
+                    var config = configBuilder.Build();
+                    var path = config["CobwebSsmPath"];
+
+                    source.Path = path;
+                    source.ParameterProcessor = new KafkaCuratorParameterProcessor();
+                });
         }
     }
 

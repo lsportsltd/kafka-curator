@@ -1,37 +1,6 @@
 {
   "Topics": [
     {
-      "Name": "Livescore.Active",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "Livescore.Delta",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "Livescore.Buffer",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "Livescore.Buffer.Expired",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "BlackWidow.Item.Internal",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete",
-      "CompressionType": "producer"
-    },
-    {
       "Name": "DI.Fixture",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -40,25 +9,13 @@
     {
       "Name": "STM.Fixture.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.Subscription.Handled",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.Fixture.Distributed",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Fixture.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
@@ -68,93 +25,28 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "Markets.Valid",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.PreMatchMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.InPlayMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.InPlayMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Pre.Live.InPlayMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.PreMatchMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Pre.Live.PreMatchMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "Markets.Outliers",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "DI.Livescore",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "50000000"
     },
     {
       "Name": "STM.Livescore.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Livescore.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.ProviderEvent.Refined",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.ProviderEvent.Mapped",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.ProviderEvent.NotMapped",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 20,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "DATA.ProviderFixture.Full",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 30,
       "CleanupPolicy": "delete"
     },
     {
@@ -166,7 +58,43 @@
     {
       "Name": "DI.ProviderFixture.Valid",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 30,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.PreMatchMarket.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.InPlayMarket.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.InPlayMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Pre.Live.InPlayMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.PreMatchMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Pre.Live.PreMatchMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
@@ -182,15 +110,32 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "OCR.FullFrame",
+      "Name": "STM.MarketSettings.Maintenance",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact",
-      "MaxMessageBytes": "10485880",
-      "RetentionBytes": "5000000000"
+      "CleanupPolicy": "compact"
     },
     {
-      "Name": "OCR.FullFrame.Volleyball",
+      "Name": "STM.MarketSettings.Changed",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "BlackWidow.Item.Internal",
+      "ReplicationFactor": 3,
+      "Partitions": 100,
+      "CleanupPolicy": "delete",
+      "CompressionType": "producer"
+    },
+    {
+      "Name": "DI.PlayersManger.Mapping",
+      "ReplicationFactor": 3,
+      "Partitions": 6,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "OCR.FullFrame",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact",
@@ -207,14 +152,6 @@
     },
     {
       "Name": "OCR.ScoreboardFrame.Tennis",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "RetentionBytes": "2000000000",
-      "SegmentMs": "86400000"
-    },
-    {
-      "Name": "OCR.ScoreboardFrame.Volleyball",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
@@ -242,73 +179,24 @@
       "Name": "OCR.Invalid",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "RetentionBytes": "5000000000"
-    },
-    {
-      "Name": "DATA.Markets.PreMatch",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.StartDateLimit.Maintenance",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.MarketSettings.Maintenance",
+      "Name": "STM.Subscription.Handled",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.MarketSettings.Changed",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.PlayersManger.Mapping",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.InPlayMarket.ValidateAssociation",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.PreMatchMarket.ValidateAssociation",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.InPlayMarket.Associated",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "STM.PreMatchMarket.Associated",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
@@ -318,32 +206,40 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "DI.PreMatch.Markets.Raw",
+      "Name": "STM.InPlayMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "Partitions": 20,
+      "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.InPlay.Markets.Raw",
+      "Name": "STM.PreMatchMarket.ValidateAssociation",
       "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "Partitions": 20,
+      "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Livescore.Raw",
+      "Name": "STM.InPlayMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.ProviderFixture.Raw",
+      "Name": "STM.PreMatchMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Fixture.Distributed",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Livescore.Delta",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "DI.Resulting.Prematch.Coverage",
@@ -358,13 +254,48 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.PreMatch.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "52429400"
+    },
+    {
+      "Name": "DI.InPlay.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "52429400"
+    },
+    {
+      "Name": "DI.Livescore.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "52429400"
+    },
+    {
+      "Name": "DI.ProviderFixture.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 30,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
       "Name": "DI.ProviderFixture.Enriched",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 30,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.ProviderFixture.MetadataMapped",
+      "Name": "DI.OutrightLivescore.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.OutrightLivescore",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
