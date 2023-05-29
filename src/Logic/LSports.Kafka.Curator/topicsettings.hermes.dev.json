@@ -192,15 +192,6 @@
       "RetentionMs": "3600000"
     },
     {
-      "Name": "OCR.FullFrame.Volleyball",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880",
-      "RetentionBytes": "5000000000",
-      "RetentionMs": "3600000"
-    },
-    {
       "Name": "OCR.ScoreboardFrame",
       "ReplicationFactor": 3,
       "Partitions": 3,
