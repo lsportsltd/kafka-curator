@@ -378,7 +378,7 @@
     {
       "Name": "DI.ProviderFixture.FixtureMapped",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 30,
       "CleanupPolicy": "delete"
     }
   ]
