@@ -3,7 +3,7 @@
     {
       "Name": "BlackWidow.Item.Internal",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 50,
       "CleanupPolicy": "delete",
       "CompressionType": "producer"
     }
