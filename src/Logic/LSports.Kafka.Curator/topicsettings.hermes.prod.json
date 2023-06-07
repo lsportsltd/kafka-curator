@@ -77,25 +77,15 @@
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 50,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Pre.Live.InPlayMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 50,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"      
     },
     {
       "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 50,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DI.Pre.Live.PreMatchMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 50,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "STM.FeedSuspension.Maintenance",
