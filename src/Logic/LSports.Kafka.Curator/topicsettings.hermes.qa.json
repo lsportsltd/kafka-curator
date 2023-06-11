@@ -73,28 +73,28 @@
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.InPlay.Settelments.PreVerified",
+      "Name": "DI.InPlay.Settlements.PreVerified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.PreMatch.Settelments.PreVerified",
+      "Name": "DI.PreMatch.Settlements.PreVerified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.InPlay.Settelments.Verified",
+      "Name": "DI.InPlay.Settlements.Verified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.PreMatch.Settelments.Verified",
+      "Name": "DI.PreMatch.Settlements.Verified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
