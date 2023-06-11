@@ -66,14 +66,14 @@
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.InPlay.Settelments.Pre.Verified",
+      "Name": "DI.InPlay.Settelments.PreVerified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.PreMatch.Settelments.Pre.Verified",
+      "Name": "DI.PreMatch.Settelments.PreVerified",
       "ReplicationFactor": 3,
       "Partitions": 25,
       "CleanupPolicy": "delete",
