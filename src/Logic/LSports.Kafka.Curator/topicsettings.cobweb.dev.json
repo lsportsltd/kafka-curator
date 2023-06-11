@@ -1,4 +1,11 @@
 {
   "Topics": [
+    {
+      "Name": "BlackWidow.Item.Internal",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "CompressionType": "producer"
+    }
   ]
 }
