@@ -90,28 +90,28 @@
     {
       "Name": "DI.InPlay.Settlements.PreVerified",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 10,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.PreMatch.Settlements.PreVerified",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 10,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.InPlay.Settlements.Verified",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 10,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.PreMatch.Settlements.Verified",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 10,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
