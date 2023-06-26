@@ -335,6 +335,55 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "STM.Fixtures.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
+    },
+    {
+      "Name": "STM.Livescore.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
+    },
+    {
+      "Name": "STM.MarketsInPlay.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
+    },
+    {
+        "Name": "STM.SettlementsInPlay.Processed",
+        "ReplicationFactor": 3,
+        "Partitions": 3,
+        "CleanupPolicy": "delete",
+        "RetentionMs": "172800000"
+    },
+    {
+        "Name": "STM.MarketsPreMatch.Processed",
+        "ReplicationFactor": 3,
+        "Partitions": 3,
+        "CleanupPolicy": "delete",
+        "RetentionMs": "172800000"
+    },
+    {
+        "Name": "STM.SettlementsPreMatch.Processed",
+        "ReplicationFactor": 3,
+        "Partitions": 3,
+        "CleanupPolicy": "delete",
+        "RetentionMs": "172800000"
+    },
+    {
+        "Name": "STM.OutrightLivescore.Processed",
+        "ReplicationFactor": 3,
+        "Partitions": 3,
+        "CleanupPolicy": "delete",
+        "RetentionMs": "172800000"
+    },
+    {
       "Name": "DI.PreMatch.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 10,
