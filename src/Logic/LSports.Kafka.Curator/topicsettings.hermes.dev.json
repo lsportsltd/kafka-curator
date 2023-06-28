@@ -466,6 +466,12 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "CDC.Testing",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
