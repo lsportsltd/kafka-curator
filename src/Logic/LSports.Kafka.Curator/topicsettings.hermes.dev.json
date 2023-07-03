@@ -478,7 +478,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact",
-      "MaxMessageBytes": "100000000"
+      "MaxMessageBytes": "10485880"
     }
   ]
 }
