@@ -362,6 +362,13 @@
       "ReplicationFactor": 3,
       "Partitions": 30,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Livescore.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485760"
     }
   ]
 }
