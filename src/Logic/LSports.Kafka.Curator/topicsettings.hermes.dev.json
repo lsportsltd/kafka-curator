@@ -474,11 +474,11 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.LivescoreProcessor",
+      "Name": "DI.Livescore.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact",
-      "MaxMessageBytes": "10000000"
+      "MaxMessageBytes": "100000000"
     }
   ]
 }
