@@ -146,6 +146,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.OutrightLivescore.Refined",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.OutrightLivescore.Associated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DATA.ProviderEvent.Refined",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -454,6 +466,19 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "CDC.Testing",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Livescore.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485760"
     }
   ]
 }
