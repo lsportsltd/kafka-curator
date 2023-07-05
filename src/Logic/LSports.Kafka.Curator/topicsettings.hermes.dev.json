@@ -498,7 +498,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.Livescore.Processed",
+      "Name": "DI.ProviderLivescore.Mapped",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact",
