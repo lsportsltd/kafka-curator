@@ -337,28 +337,28 @@
       "RetentionMs": "172800000"
     },
     {
-      "Name": "STM.MarketsInPlay.Processed",
+      "Name": "STM.InPlayMarkets.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.SettlementsInPlay.Processed",
+        "Name": "STM.InPlaySettlements.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
         "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.MarketsPreMatch.Processed",
+        "Name": "STM.PreMatchMarkets.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
         "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.SettlementsPreMatch.Processed",
+        "Name": "STM.PreMatchSettlements.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
