@@ -318,6 +318,12 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.FixtureManager.Conflicts",
+      "ReplicationFactor": 3,
+      "Partitions": 15,
+      "CleanupPolicy": "delete"
     }
   ]
 }
