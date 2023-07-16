@@ -267,6 +267,30 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.Clickhouse.Ingest.Outliers.Inplay",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Clickhouse.Ingest.Outliers.Prematch",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Clickhouse.Ingest.Resulting.Inplay",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.Clickhouse.Ingest.Resulting.Postmatch",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.Resulting.Inplay.Coverage",
       "ReplicationFactor": 3,
       "Partitions": 3,
