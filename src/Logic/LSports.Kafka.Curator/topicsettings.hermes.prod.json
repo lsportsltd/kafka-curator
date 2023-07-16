@@ -348,6 +348,12 @@
       "ReplicationFactor": 3,
       "Partitions": 15,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.Validated",
+      "ReplicationFactor": 3,
+      "Partitions": 15,
+      "CleanupPolicy": "delete"
     }
   ]
 }
