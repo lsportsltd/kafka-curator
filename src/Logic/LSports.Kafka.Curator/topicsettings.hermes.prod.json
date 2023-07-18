@@ -354,6 +354,18 @@
       "ReplicationFactor": 3,
       "Partitions": 15,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.MetadataMapped",
+      "ReplicationFactor": 3,
+      "Partitions": 15,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.FixtureMapped",
+      "ReplicationFactor": 3,
+      "Partitions": 15,
+      "CleanupPolicy": "delete"
     }
   ]
 }

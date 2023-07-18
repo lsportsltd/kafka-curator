@@ -484,8 +484,7 @@
       "ReplicationFactor": 3,
       "Partitions": 30,
       "CleanupPolicy": "delete"
-    }
-    ,
+    },
     {
       "Name": "Tips.ExternalDistribution",
       "ReplicationFactor": 3,
