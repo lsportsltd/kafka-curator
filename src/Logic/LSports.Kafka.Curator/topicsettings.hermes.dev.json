@@ -67,18 +67,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DATA.PreMatchMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
-      "Name": "DATA.InPlayMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete"
-    },
-    {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 10,
