@@ -44,20 +44,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DATA.PreMatchMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 25,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "52429400"
-    },
-    {
-      "Name": "DATA.InPlayMarket.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 25,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "52429400"
-    },
-    {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 10,
