@@ -474,7 +474,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "Tips.ExternalDistribution",
+      "Name": "SEC.ClientEvent.Received",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
@@ -497,6 +497,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
-    }
+    },
+=
   ]
 }
