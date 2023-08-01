@@ -373,6 +373,13 @@
         "RetentionMs": "172800000"
     },
     {
+      "Name": "DI.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
+    },
+    {
       "Name": "DI.PreMatch.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 10,
