@@ -354,6 +354,13 @@
       "ReplicationFactor": 3,
       "Partitions": 15,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderLivescore.Mapped",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485760"
     }
   ]
 }
