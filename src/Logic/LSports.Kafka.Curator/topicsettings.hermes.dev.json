@@ -235,6 +235,22 @@
       "RetentionMs": "3600000"
     },
     {
+      "Name": "OCR.ScoreboardFrame.CSGO",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "2000000000",
+      "RetentionMs": "3600000"
+    },
+    {
+      "Name": "OCR.ScoreboardFrame.Soccer",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "2000000000",
+      "RetentionMs": "3600000"
+    },
+    {
       "Name": "OCR.ResultJson",
       "ReplicationFactor": 3,
       "Partitions": 3,
