@@ -44,6 +44,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "SEC.ClientEvent.Received",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DATA.ProviderFixture.Full",
       "ReplicationFactor": 3,
       "Partitions": 30,
