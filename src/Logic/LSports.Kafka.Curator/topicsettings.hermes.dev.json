@@ -354,6 +354,13 @@
       "RetentionMs": "172800000"
     },
     {
+      "Name": "STM.OutrightLivescore.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
+    },
+    {
       "Name": "STM.InPlayMarkets.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
