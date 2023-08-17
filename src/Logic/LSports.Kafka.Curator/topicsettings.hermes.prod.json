@@ -380,7 +380,7 @@
     {
       "Name": "DI.ProviderLivescore.Mapped",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 15,
       "CleanupPolicy": "compact",
       "MaxMessageBytes": "10485760"
     }
