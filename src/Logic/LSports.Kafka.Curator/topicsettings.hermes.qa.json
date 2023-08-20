@@ -358,6 +358,13 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "DI.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
+    },
+    {
       "Name": "DI.PreMatch.Markets.Raw",
       "ReplicationFactor": 3,
       "Partitions": 50,
