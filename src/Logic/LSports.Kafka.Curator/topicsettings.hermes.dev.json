@@ -177,7 +177,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880",
+      "MaxMessageBytes": "80000000",
       "RetentionBytes": "500000000",
       "RetentionMs": "3600000"
     },
