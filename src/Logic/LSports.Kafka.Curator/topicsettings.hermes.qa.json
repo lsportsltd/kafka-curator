@@ -449,6 +449,13 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "OS.PreMatch.Customer.Markets.Expired",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
     }
   ]
 }
