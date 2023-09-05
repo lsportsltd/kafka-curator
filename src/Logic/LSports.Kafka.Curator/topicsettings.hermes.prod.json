@@ -50,6 +50,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.OutrightLivescore.Associated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "SEC.ClientEvent.Received",
       "ReplicationFactor": 3,
       "Partitions": 3,
