@@ -6,6 +6,13 @@
       "Partitions": 50,
       "CleanupPolicy": "delete",
       "CompressionType": "producer"
+    },
+    {
+      "Name": "BlackWidow.Interval-per-item-test.Item.Internal",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "CompressionType": "producer"
     }
   ]
 }
