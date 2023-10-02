@@ -313,6 +313,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.InPLayMarkets.Calculated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchMarkets.Calculated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.Fixture.Refine",
       "ReplicationFactor": 3,
       "Partitions": 3,
