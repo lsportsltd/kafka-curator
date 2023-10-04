@@ -143,22 +143,10 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DATA.ProviderFixture.Full",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
-    },
-    {
       "Name": "Data.Providers.Health",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "DI.ProviderFixture.Valid",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.FeedSuspension.Maintenance",
