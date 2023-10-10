@@ -5,7 +5,8 @@
       "ReplicationFactor": 3,
       "Partitions": 50,
       "CleanupPolicy": "delete",
-      "CompressionType": "producer"
+      "CompressionType": "producer",
+      "MaxMessageBytes": "50000000"
     },
     {
       "Name": "BlackWidow.Interval-per-item-test.Item.Internal",
