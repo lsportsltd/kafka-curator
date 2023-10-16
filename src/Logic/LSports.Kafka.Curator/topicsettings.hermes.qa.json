@@ -318,6 +318,34 @@
       "MaxMessageBytes": "10485880"
     },
     {
+      "Name": "DI.InPlayMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.PreMatchMarket.Outliered",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.PreMatch.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.InPlay.Markets.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
       "Partitions": 10,
