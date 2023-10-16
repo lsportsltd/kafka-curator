@@ -113,7 +113,7 @@
     {
       "Name": "STM.MarketSettings.Maintenance",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "compact"
     },
     {
