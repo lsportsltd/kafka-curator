@@ -334,14 +334,14 @@
     {
       "Name": "DI.PreMatch.Markets.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.InPlay.Markets.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
