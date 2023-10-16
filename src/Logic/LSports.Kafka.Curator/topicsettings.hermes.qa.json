@@ -56,20 +56,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.InPlayMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 20,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
-    },
-    {
-      "Name": "DI.PreMatchMarket.Outliered",
-      "ReplicationFactor": 3,
-      "Partitions": 20,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
-    },
-    {
       "Name": "DI.Settlements.StatusSignals",
       "ReplicationFactor": 3,
       "Partitions": 20,
@@ -178,32 +164,32 @@
       "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.InPlaySettlements.Processed",
-        "ReplicationFactor": 3,
-        "Partitions": 3,
-        "CleanupPolicy": "delete",
-        "RetentionMs": "172800000"
+      "Name": "STM.InPlaySettlements.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.PreMatchMarkets.Processed",
-        "ReplicationFactor": 3,
-        "Partitions": 3,
-        "CleanupPolicy": "delete",
-        "RetentionMs": "172800000"
+      "Name": "STM.PreMatchMarkets.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.PreMatchSettlements.Processed",
-        "ReplicationFactor": 3,
-        "Partitions": 3,
-        "CleanupPolicy": "delete",
-        "RetentionMs": "172800000"
+      "Name": "STM.PreMatchSettlements.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.OutrightLivescore.Processed",
-        "ReplicationFactor": 3,
-        "Partitions": 3,
-        "CleanupPolicy": "delete",
-        "RetentionMs": "172800000"
+      "Name": "STM.OutrightLivescore.Processed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "172800000"
     },
     {
       "Name": "OCR.FullFrame",
@@ -328,20 +314,6 @@
       "Name": "DI.ProviderEvent.ProviderMarkets",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
-    },
-    {
-      "Name": "DI.PreMatch.Markets.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 20,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
-    },
-    {
-      "Name": "DI.InPlay.Markets.Raw",
-      "ReplicationFactor": 3,
-      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
