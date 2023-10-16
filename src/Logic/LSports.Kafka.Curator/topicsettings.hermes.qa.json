@@ -58,14 +58,14 @@
     {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 10,
+      "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
