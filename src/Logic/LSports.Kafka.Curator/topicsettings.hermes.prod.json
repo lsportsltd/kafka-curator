@@ -254,7 +254,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "104858800"
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.Clickhouse.Ingest.Outliers.Inplay",
@@ -285,7 +285,7 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "MaxMessageBytes": "104858800"
+      "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.PreMatch.Markets.Raw",
