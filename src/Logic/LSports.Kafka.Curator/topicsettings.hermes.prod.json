@@ -253,7 +253,8 @@
       "Name": "DI.Resulting.Prematch.Coverage",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
     },
     {
       "Name": "DI.Clickhouse.Ingest.Outliers.Inplay",
@@ -283,7 +284,8 @@
       "Name": "DI.Resulting.Inplay.Coverage",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
     },
     {
       "Name": "DI.PreMatch.Markets.Raw",
