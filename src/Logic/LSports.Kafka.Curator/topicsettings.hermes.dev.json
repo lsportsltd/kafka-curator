@@ -509,6 +509,12 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "Spider.Social.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
