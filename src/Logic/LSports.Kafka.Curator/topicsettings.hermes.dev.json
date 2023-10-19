@@ -67,6 +67,20 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.InPlayMarket.Outliered.Simulation",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
+      "Name": "DI.InPlayMarket.CleanOdds.Simulation",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 10,
