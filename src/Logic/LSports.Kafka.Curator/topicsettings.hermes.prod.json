@@ -297,7 +297,7 @@
     {
       "Name": "DI.InPlay.Markets.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 100,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "52429400"
     },
