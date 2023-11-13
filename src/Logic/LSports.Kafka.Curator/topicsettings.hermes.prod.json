@@ -122,17 +122,9 @@
       "Name": "OCR.FullFrame",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact",
+      "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880",
       "RetentionBytes": "5000000000"
-    },
-    {
-      "Name": "OCR.ScoreboardFrame",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "RetentionBytes": "2000000000",
-      "SegmentMs": "86400000"
     },
     {
       "Name": "OCR.ScoreboardFrame.Tennis",
@@ -149,22 +141,6 @@
       "CleanupPolicy": "delete",
       "RetentionBytes": "2000000000",
       "SegmentMs": "86400000"
-    },
-    {
-      "Name": "OCR.ScoreboardFrame.Volleyball",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "RetentionBytes": "2000000000",
-      "RetentionMs": "86400000"
-    },
-    {
-      "Name": "OCR.ScoreboardFrame.CSGO",
-      "ReplicationFactor": 3,
-      "Partitions": 3,
-      "CleanupPolicy": "delete",
-      "RetentionBytes": "2000000000",
-      "RetentionMs": "86400000"
     },
     {
       "Name": "OCR.ScoreboardFrame.Soccer",
