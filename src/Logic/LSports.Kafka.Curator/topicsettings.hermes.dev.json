@@ -402,13 +402,6 @@
       "MaxMessageBytes": "10485880"
     },
     {
-      "Name": "DI.ProviderEvent.ProviderMarkets",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "delete",
-      "MaxMessageBytes": "10485880"
-    },
-    {
       "Name": "DI.Resulting.Prematch.Coverage",
       "ReplicationFactor": 3,
       "Partitions": 3,
