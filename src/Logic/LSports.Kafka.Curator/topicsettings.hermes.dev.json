@@ -404,7 +404,7 @@
     {
       "Name": "DI.ProviderEvent.ProviderMarkets",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 10,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
