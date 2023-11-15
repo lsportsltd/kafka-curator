@@ -187,8 +187,7 @@
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "80000000",
-      "RetentionBytes": "500000000",
-      "RetentionMs": "3600000"
+      "RetentionBytes": "5000000000"
     },
     {
       "Name": "OCR.ScoreboardFrame.Tennis",
