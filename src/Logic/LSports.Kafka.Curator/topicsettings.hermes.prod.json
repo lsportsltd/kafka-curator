@@ -84,7 +84,7 @@
     {
       "Name": "DI.ProviderMarket.Raw",
       "ReplicationFactor": 3,
-      "Partitions": 100,
+      "Partitions": 50,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
