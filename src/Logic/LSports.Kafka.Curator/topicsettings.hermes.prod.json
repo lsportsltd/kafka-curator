@@ -82,6 +82,13 @@
       "MaxMessageBytes": "10485880"
     },
     {
+      "Name": "DI.ProviderMarket.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 100,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
+    {
       "Name": "DI.Settlements.StatusSignals",
       "ReplicationFactor": 3,
       "Partitions": 25,
