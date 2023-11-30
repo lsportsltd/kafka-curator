@@ -184,7 +184,7 @@
     {
       "Name": "OCR.FullFrame",
       "ReplicationFactor": 3,
-      "Partitions": 3,
+      "Partitions": 4,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "80000000",
       "RetentionBytes": "5000000000"
