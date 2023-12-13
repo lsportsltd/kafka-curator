@@ -259,6 +259,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.InPlayMarket.Refiner.Maintenance",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Refiner.Maintenance",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
       "Partitions": 20,
