@@ -311,13 +311,13 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.InPLayMarkets.Calculated",
+      "Name": "STM.InPlayMarket.Calculated",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.PreMatchMarkets.Calculated",
+      "Name": "STM.PreMatchMarket.Calculated",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
