@@ -299,6 +299,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.InPlayMarket.OddsExternalSuspension.Changed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchMarket.OddsExternalSuspension.Changed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.InPlayMarket.ValidateAssociation",
       "ReplicationFactor": 3,
       "Partitions": 3,
