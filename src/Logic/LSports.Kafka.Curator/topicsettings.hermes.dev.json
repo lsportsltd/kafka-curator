@@ -542,6 +542,6 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
-    },
+    }
   ]
 }
