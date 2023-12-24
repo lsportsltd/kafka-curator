@@ -442,6 +442,12 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.ProviderFixture.Grouped",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
