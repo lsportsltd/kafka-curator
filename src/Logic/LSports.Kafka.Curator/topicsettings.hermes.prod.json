@@ -108,6 +108,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.FeedSuspension.Market.Changed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.Configuration.Maintenance",
       "ReplicationFactor": 3,
       "Partitions": 1,
