@@ -371,7 +371,7 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Fixtures.Processed",
+      "Name": "STM.Fixture.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
@@ -393,28 +393,28 @@
       "RetentionMs": "172800000"
     },
     {
-      "Name": "STM.InPlayMarkets.Processed",
+      "Name": "STM.InPlayMarket.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.InPlaySettlements.Processed",
+        "Name": "STM.InPlaySettlement.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
         "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.PreMatchMarkets.Processed",
+        "Name": "STM.PreMatchMarket.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
         "RetentionMs": "172800000"
     },
     {
-        "Name": "STM.PreMatchSettlements.Processed",
+        "Name": "STM.PreMatchSettlement.Processed",
         "ReplicationFactor": 3,
         "Partitions": 3,
         "CleanupPolicy": "delete",
