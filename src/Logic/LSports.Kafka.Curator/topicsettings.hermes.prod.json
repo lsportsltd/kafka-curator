@@ -321,6 +321,12 @@
       "Partitions": 15,
       "CleanupPolicy": "compact",
       "MaxMessageBytes": "10485760"
+    },
+    {
+      "Name": "DI.ProviderFixture.Grouped",
+      "ReplicationFactor": 3,
+      "Partitions": 15,
+      "CleanupPolicy": "delete"
     }
   ]
 }
