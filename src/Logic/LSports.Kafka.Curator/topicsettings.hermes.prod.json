@@ -353,7 +353,7 @@
       "MaxMessageBytes": "10485760"
     },
     {
-      "Name": "DI.ProviderFixture.Grouped",
+      "Name": "DI.ProviderFixture.Processed",
       "ReplicationFactor": 3,
       "Partitions": 15,
       "CleanupPolicy": "delete"
