@@ -359,10 +359,16 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fixture.Refine",
+      "Name": "STM.Fixture.Refiner.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Fixture.Refiner.Maintenance.DataClean",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Fixture.Processed",
