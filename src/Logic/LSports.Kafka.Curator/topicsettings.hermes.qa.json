@@ -259,6 +259,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.Markets.Maintenance.DataSync",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "STM.InPlayMarket.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 10,
@@ -266,6 +272,12 @@
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataSync",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.Maintenance.DataClean",
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "compact"
@@ -281,6 +293,12 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.FixtureIdentifier.Changed",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.InPlayMarket.Refined",
