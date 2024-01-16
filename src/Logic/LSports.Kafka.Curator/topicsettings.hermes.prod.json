@@ -114,6 +114,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "STM.Configuration.Maintenance.CacheSync",
+      "ReplicationFactor": 3,
+      "Partitions": 1,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "STM.MarketSettings.Maintenance",
       "ReplicationFactor": 3,
       "Partitions": 10,
@@ -175,6 +181,12 @@
       "ReplicationFactor": 3,
       "Partitions": 10,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.Markets.Maintenance.CacheSync",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "compact"
     },
     {
       "Name": "STM.Markets.Maintenance.DataSync",
