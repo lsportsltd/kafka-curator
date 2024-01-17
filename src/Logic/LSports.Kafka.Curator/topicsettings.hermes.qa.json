@@ -347,6 +347,18 @@
       "ReplicationFactor": 3,
       "Partitions": 20,
       "CleanupPolicy": "delete"
+    },    
+    {
+      "Name": "STM.InPlayMarket.Calculated",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Calculated",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.Fixture.Refiner.Maintenance.DataSync",
