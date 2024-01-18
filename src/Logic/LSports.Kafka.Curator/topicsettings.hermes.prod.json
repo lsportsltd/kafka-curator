@@ -171,48 +171,6 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Markets.Maintenance.CacheSync",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.Markets.Maintenance.DataSync",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.InPlayMarket.Maintenance.DataSync",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.PreMatchMarket.Maintenance.DataSync",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.Markets.Maintenance.DataClean",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.InPlayMarket.Maintenance.DataClean",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
-      "Name": "STM.PreMatchMarket.Maintenance.DataClean",
-      "ReplicationFactor": 3,
-      "Partitions": 10,
-      "CleanupPolicy": "compact"
-    },
-    {
       "Name": "STM.Markets.FixtureIdentifier.Changed",
       "ReplicationFactor": 3,
       "Partitions": 3,
