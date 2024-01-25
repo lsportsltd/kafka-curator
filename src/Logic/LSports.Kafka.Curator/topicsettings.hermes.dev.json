@@ -584,6 +584,18 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.PreMatchSettlement.Refined",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.InPlaySettlement.Refined",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
     }
   ]
 }
