@@ -149,7 +149,8 @@
       "Name": "DATA.ProviderEvent.Refined",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "delete"
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485760"
     },
     {
       "Name": "DATA.ProviderEvent.Mapped",
