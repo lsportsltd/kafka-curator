@@ -526,6 +526,13 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DATA.ProviderEvent.Refined",
+      "ReplicationFactor": 3,
+      "Partitions": 5,
+      "CleanupPolicy": "compact",
+      "MaxMessageBytes": "10485760"
     }
   ]
 }
