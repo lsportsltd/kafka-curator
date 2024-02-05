@@ -24,6 +24,14 @@ namespace LSports.Kafka.Curator.Extensions
 
                     source.Path = path;
                     source.ParameterProcessor = new KafkaCuratorParameterProcessor();
+                })
+                .AddSystemsManager(source =>
+                {
+                    var config = configBuilder.Build();
+                    var path = config["PlatformSsmPath"];
+
+                    source.Path = path;
+                    source.ParameterProcessor = new KafkaCuratorParameterProcessor();
                 });
         }
     }

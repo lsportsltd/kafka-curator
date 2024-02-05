@@ -32,7 +32,14 @@ services.AddKafkaCurator(kafka => kafka
         .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
         .ConfigureChangesManager(changes => changes
             .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeCobWeb).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json")));
+        .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json"))
+
+    .AddCluster(cluster => cluster.WithName("Platform")
+        .WithBrokers(config[Endpoints.KafkaPlatformBootstrapServers])
+        .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
+        .ConfigureChangesManager(changes => changes
+            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludePlatform).Get<string[]>()))
+        .AddTopicsJsonFile($"topicsettings.platform.{env}.json")));
 
 var provider = services.BuildServiceProvider();
 var curator = provider.CreateCurator();
