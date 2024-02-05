@@ -1,0 +1,12 @@
+{
+  "Topics": [
+    {
+      "Name": "Platform.Robots.Internal",
+      "ReplicationFactor": 3,
+      "Partitions": 50,
+      "CleanupPolicy": "delete",
+      "CompressionType": "producer",
+      "MaxMessageBytes": "50000000"
+    }    
+  ]
+}
