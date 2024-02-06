@@ -17,29 +17,33 @@ var config = new ConfigurationBuilder()
 
 var services = new ServiceCollection();
 
-services.AddKafkaCurator(kafka => kafka
-    .UseConsoleLog()
+services.AddKafkaCurator(kafka =>
+    {
+        kafka.UseConsoleLog()
+            .AddCluster(cluster => cluster.WithName("Hermes")
+                .WithBrokers(config[Endpoints.KafkaHermesBootstrapServers])
+                .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
+                .ConfigureChangesManager(changes => changes
+                    .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeHermes).Get<string[]>()))
+                .AddTopicsJsonFile($"topicsettings.hermes.{env}.json"))
+            .AddCluster(cluster => cluster.WithName("CobWeb")
+                .WithBrokers(config[Endpoints.KafkaCobWebBootstrapServers])
+                .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
+                .ConfigureChangesManager(changes => changes
+                    .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeCobWeb).Get<string[]>()))
+                .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json"));
 
-    .AddCluster(cluster => cluster.WithName("Hermes")
-        .WithBrokers(config[Endpoints.KafkaHermesBootstrapServers])
-        .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
-        .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeHermes).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.hermes.{env}.json"))
-
-    .AddCluster(cluster => cluster.WithName("CobWeb")
-        .WithBrokers(config[Endpoints.KafkaCobWebBootstrapServers])
-        .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
-        .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludeCobWeb).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.cobweb.{env}.json"))
-
-    .AddCluster(cluster => cluster.WithName("Platform")
-        .WithBrokers(config[Endpoints.KafkaPlatformBootstrapServers])
-        .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
-        .ConfigureChangesManager(changes => changes
-            .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludePlatform).Get<string[]>()))
-        .AddTopicsJsonFile($"topicsettings.platform.{env}.json")));
+        if (env == "dev")
+        {
+            kafka.AddCluster(cluster => cluster.WithName("Platform")
+                .WithBrokers(config[Endpoints.KafkaPlatformBootstrapServers])
+                .WithSecurityInformation(info => info.SecurityProtocol = SecurityProtocol.Ssl)
+                .ConfigureChangesManager(changes => changes
+                    .WithTopicPrefixToExclude(config.GetSection(TopicPattern.ToExcludePlatform).Get<string[]>()))
+                .AddTopicsJsonFile($"topicsettings.platform.{env}.json"));
+        }
+    }
+);
 
 var provider = services.BuildServiceProvider();
 var curator = provider.CreateCurator();
