@@ -492,6 +492,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.LSI.Incidents.Mapped",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.LSI.Incidents.Validated",
       "ReplicationFactor": 3,
       "Partitions": 10,
@@ -501,6 +507,12 @@
       "Name": "DI.LSI.Incidents.Decided",
       "ReplicationFactor": 3,
       "Partitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "DI.LSI.Decision.Refined",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
