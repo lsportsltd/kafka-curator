@@ -303,13 +303,13 @@
     {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 25,
       "CleanupPolicy": "delete"
     },
     {
@@ -339,25 +339,25 @@
     {
       "Name": "STM.InPlayMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 25,
       "CleanupPolicy": "delete"
     },    
     {
       "Name": "STM.InPlayMarket.Calculated",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 50,
       "CleanupPolicy": "delete"
     },
     {
       "Name": "STM.PreMatchMarket.Calculated",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 25,
       "CleanupPolicy": "delete"
     },
     {
@@ -375,14 +375,14 @@
     {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 50,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
     {
       "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 20,
+      "Partitions": 25,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
     },
