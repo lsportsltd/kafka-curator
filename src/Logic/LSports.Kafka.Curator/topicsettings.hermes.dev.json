@@ -611,7 +611,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "CV.VisionFeed.VideoFiles.Raw",
+      "Name": "CV.VisionFeed.VideoFiles",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
@@ -625,14 +625,14 @@
       "RetentionMs": "3600000"
     },
     {
-      "Name": "CV.VisionFeed.Actions.Raw",
+      "Name": "CV.VisionFeed.Actions.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "RetentionMs": "3600000"
     },
     {
-      "Name": "CV.VisionFeed.Rallies.Raw",
+      "Name": "CV.VisionFeed.Rallies",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
