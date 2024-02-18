@@ -615,28 +615,28 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "RetentionMs": "3600000"
+      "RetentionMs": "36000000"
     },
     {
       "Name": "CV.VisionFeed.Models.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "RetentionMs": "3600000"
+      "RetentionMs": "36000000"
     },
     {
       "Name": "CV.VisionFeed.Actions.Processed",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "RetentionMs": "3600000"
+      "RetentionMs": "36000000"
     },
     {
       "Name": "CV.VisionFeed.Rallies",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
-      "RetentionMs": "3600000"
+      "RetentionMs": "36000000"
     }
   ]
 }
