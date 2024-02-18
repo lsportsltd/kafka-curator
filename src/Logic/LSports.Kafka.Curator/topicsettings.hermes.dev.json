@@ -609,6 +609,34 @@
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "CV.VisionFeed.VideoFiles.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "3600000"
+    },
+    {
+      "Name": "CV.VisionFeed.Models.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "3600000"
+    },
+    {
+      "Name": "CV.VisionFeed.Actions.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "3600000"
+    },
+    {
+      "Name": "CV.VisionFeed.Rallies.Raw",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "3600000"
     }
   ]
 }
