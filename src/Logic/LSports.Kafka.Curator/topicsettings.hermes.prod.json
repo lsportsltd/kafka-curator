@@ -70,7 +70,7 @@
     {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 100,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"      
     },
@@ -221,7 +221,7 @@
     {
       "Name": "STM.InPlayMarket.Refined",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 100,
       "CleanupPolicy": "delete"
     },
     {
@@ -257,7 +257,7 @@
     {
       "Name": "STM.InPlayMarket.Associated",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 100,
       "CleanupPolicy": "delete"
     },
     {
@@ -269,7 +269,7 @@
     {
       "Name": "STM.InPlayMarket.Calculated",
       "ReplicationFactor": 3,
-      "Partitions": 50,
+      "Partitions": 100,
       "CleanupPolicy": "delete"
     },
     {
