@@ -378,13 +378,13 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fixture.Refiner.Maintenance.DataSync",
+      "Name": "STM.Fixture.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "STM.Fixture.Refiner.Maintenance.DataClean",
+      "Name": "STM.Fixture.Maintenance.DataClean",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
