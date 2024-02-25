@@ -679,7 +679,7 @@
       "RetentionMs": "36000000"
     },
     {
-      "Name": "CV.OCR.Archive.Event",
+      "Name": "CV.OCR.Archive.Events",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
