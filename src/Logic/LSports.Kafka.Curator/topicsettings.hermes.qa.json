@@ -538,7 +538,7 @@
       "CleanupPolicy": "delete"
     },
     {
-      "Name": "DI.LSI.Decision.Report",
+      "Name": "DI.LSI.Incidents.Decided.Report",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
