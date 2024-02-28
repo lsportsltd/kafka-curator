@@ -531,6 +531,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "DI.LSI.Decision.Report",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.LSI.Decision.Refined",
       "ReplicationFactor": 3,
       "Partitions": 3,
