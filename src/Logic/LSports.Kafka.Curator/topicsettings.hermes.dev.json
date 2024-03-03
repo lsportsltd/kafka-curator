@@ -325,6 +325,12 @@
       "CleanupPolicy": "compact"
     },
     {
+      "Name": "STM.Markets.Maintenance.Recalculation",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
       "Name": "STM.Markets.FixtureIdentifier.Changed",
       "ReplicationFactor": 3,
       "Partitions": 3,
