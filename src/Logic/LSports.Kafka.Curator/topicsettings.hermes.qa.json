@@ -123,6 +123,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.MarketSettings.Changed.Consolidated",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "STM.StartDateLimit.Maintenance",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -290,6 +296,12 @@
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataClean",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"

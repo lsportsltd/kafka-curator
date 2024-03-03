@@ -127,6 +127,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.MarketSettings.Changed.Consolidated",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.PlayersManger.Mapping",
       "ReplicationFactor": 3,
       "Partitions": 6,
@@ -215,6 +221,12 @@
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataClean",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.Markets.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"
