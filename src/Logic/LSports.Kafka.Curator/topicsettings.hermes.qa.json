@@ -301,7 +301,13 @@
       "CleanupPolicy": "compact"
     },
     {
-      "Name": "STM.Markets.Maintenance.Recalculation",
+      "Name": "STM.InPlayMarket.Maintenance.Recalculation",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"
