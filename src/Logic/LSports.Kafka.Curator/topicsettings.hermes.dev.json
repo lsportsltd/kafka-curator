@@ -506,7 +506,7 @@
       "MaxMessageBytes": "104858800"
     },
     {
-      "Name": "DI.InPlay.Markets.Stream",
+      "Name": "DI.InPlay.Markets.Unified",
       "ReplicationFactor": 3,
       "Partitions": 20,
       "CleanupPolicy": "delete",
