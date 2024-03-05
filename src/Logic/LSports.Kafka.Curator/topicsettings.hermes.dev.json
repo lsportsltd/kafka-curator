@@ -633,6 +633,13 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name":"DI.Livescore.LSI",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "50000000"
+    },
+    {
       "Name": "DI.LSI.Incidents.Decided.Report",
       "ReplicationFactor": 3,
       "Partitions": 3,
