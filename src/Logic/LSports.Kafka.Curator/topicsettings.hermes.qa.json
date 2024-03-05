@@ -604,6 +604,48 @@
       "Partitions": 5,
       "CleanupPolicy": "compact",
       "MaxMessageBytes": "10485760"
+    },
+    {
+      "Name": "CV.OCR.Archive.EventParticipants",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.ProviderParameters",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.Events",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.FullFrames",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.Results",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.ScoreboardFrames",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
     }
   ]
 }
