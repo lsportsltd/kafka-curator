@@ -676,6 +676,18 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.PreMatchSettlement.Associated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
+      "Name": "STM.InPlaySettlement.Associated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "CV.VisionFeed.VideoFiles",
       "ReplicationFactor": 3,
       "Partitions": 3,
