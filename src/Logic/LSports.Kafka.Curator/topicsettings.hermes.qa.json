@@ -373,6 +373,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.Fixture.StartDateLimit.Resolve",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.InPlayMarket.Outliered",
       "ReplicationFactor": 3,
       "Partitions": 50,
