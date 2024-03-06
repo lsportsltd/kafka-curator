@@ -86,7 +86,14 @@
       "Partitions": 20,
       "CleanupPolicy": "delete",
       "MaxMessageBytes": "10485880"
-    },  
+    },
+    {
+      "Name": "DI.InPlay.Markets.OddService",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "10485880"
+    },
     {
       "Name": "DI.PreMatchMarket.Outliered",
       "ReplicationFactor": 3,
@@ -264,6 +271,12 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name": "STM.MarketSettings.Changed.Consolidated",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.PlayersManger.Mapping",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -307,6 +320,18 @@
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataClean",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.InPlayMarket.Maintenance.Recalculation",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "compact"
+    },
+    {
+      "Name": "STM.PreMatchMarket.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "compact"
@@ -481,6 +506,13 @@
       "MaxMessageBytes": "104858800"
     },
     {
+      "Name": "DI.InPlay.Markets.Unified",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
+    },
+    {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -601,6 +633,19 @@
       "CleanupPolicy": "delete"
     },
     {
+      "Name":"DI.Livescore.LSI",
+      "ReplicationFactor": 3,
+      "Partitions": 10,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "50000000"
+    },
+    {
+      "Name": "DI.LSI.Incidents.Decided.Report",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
+    {
       "Name": "DI.LSI.Decision.Refined",
       "ReplicationFactor": 3,
       "Partitions": 3,
@@ -653,6 +698,48 @@
     },
     {
       "Name": "CV.VisionFeed.Rallies",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.EventParticipants",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.ProviderParameters",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.Events",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.FullFrames",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.Results",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete",
+      "RetentionMs": "36000000"
+    },
+    {
+      "Name": "CV.OCR.Archive.ScoreboardFrames",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete",
