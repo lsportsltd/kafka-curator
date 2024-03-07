@@ -513,6 +513,13 @@
       "MaxMessageBytes": "104858800"
     },
     {
+      "Name": "DI.PreMatch.Markets.Unified",
+      "ReplicationFactor": 3,
+      "Partitions": 20,
+      "CleanupPolicy": "delete",
+      "MaxMessageBytes": "104858800"
+    },
+    {
       "Name": "DI.Livescore.Raw",
       "ReplicationFactor": 3,
       "Partitions": 3,
