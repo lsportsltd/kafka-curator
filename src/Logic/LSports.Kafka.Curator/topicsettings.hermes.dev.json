@@ -765,7 +765,7 @@
       "RetentionMs": "36000000"
     },
      {
-      "Name": "STM.CustomerLog.Published",
+      "Name": "STM.CustomerLog.Inplay.Published",
       "ReplicationFactor": 3,
       "Partitions": 3,
       "CleanupPolicy": "delete"
