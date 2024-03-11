@@ -763,6 +763,12 @@
       "Partitions": 3,
       "CleanupPolicy": "delete",
       "RetentionMs": "36000000"
-    }
+    },
+     {
+      "Name": "STM.CustomerLog.Published",
+      "ReplicationFactor": 3,
+      "Partitions": 3,
+      "CleanupPolicy": "delete"
+    },
   ]
 }
