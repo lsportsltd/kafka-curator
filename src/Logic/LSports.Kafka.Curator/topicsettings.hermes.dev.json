@@ -292,7 +292,9 @@
       "Name": "STM.Markets.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.InPlayMarket.Maintenance.DataSync",
