@@ -262,7 +262,9 @@
       "Name": "STM.Configuration.Maintenance.CacheSync",
       "ReplicationFactor": 3,
       "Partitions": 1,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.MarketSettings.Changed",
@@ -286,7 +288,9 @@
       "Name": "STM.Markets.Maintenance.CacheSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.Markets.Maintenance.DataSync",
@@ -300,43 +304,57 @@
       "Name": "STM.InPlayMarket.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataSync",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.Markets.Maintenance.DataClean",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.InPlayMarket.Maintenance.DataClean",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.DataClean",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.InPlayMarket.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.PreMatchMarket.Maintenance.Recalculation",
       "ReplicationFactor": 3,
       "Partitions": 3,
-      "CleanupPolicy": "compact"
+      "CleanupPolicy": "delete",
+      "RetentionBytes": "1",
+      "RetentionMs": "86400000"
     },
     {
       "Name": "STM.Markets.FixtureIdentifier.Changed",
