@@ -6,7 +6,8 @@
       "Partitions": 100,
       "CleanupPolicy": "delete",
       "CompressionType": "producer",
-      "MaxMessageBytes": "10000000"
+      "MaxMessageBytes": "10000000",
+      "RetentionMs": "43200000"
     }
   ]
 }
