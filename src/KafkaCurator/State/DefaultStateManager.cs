@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace KafkaCurator.State
         {
             var topicsMetadata = _adminClient.GetMetadata(_configuration.Timeout).Topics
                 .ToDictionary(t => t.Topic, t => t);
+            if (topicsMetadata.Keys.Count == 0) return new List<ITopicConfiguration>().AsReadOnly();
             
             var topicsConfigResults = await DescribeTopicConfigAsync(topicsMetadata.Keys);
 
