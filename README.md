@@ -2,8 +2,8 @@
 # kafka-curator
 
 # Introduction
-- KafkaCurator was designed to provide a simple and suprevised way to manage everything related to Kafka topics.
-- Alot of the code in this library was inspired by [KafkaFlow](https://github.com/Farfetch/kafkaflow).
+- KafkaCurator was designed to provide a simple and supervised way to manage everything related to Kafka topics.
+- A lot of the code in this library was inspired by [KafkaFlow](https://github.com/Farfetch/kafkaflow).
 
 # Getting Started
 ## Requirements
